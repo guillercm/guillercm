@@ -26,8 +26,8 @@
   }
 
   html, body {
-    scroll-behavior: smooth !important;
-  }
+    overflow-x:hidden 
+  } 
 
   body {
     /* background-color: #4c6aae; */
