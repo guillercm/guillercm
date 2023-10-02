@@ -348,6 +348,10 @@ body::after {
         width: 400px;
       }
 
+    #correo {
+        word-break: break-word;
+    }
+
     @keyframes animacion-burbuja {
         0% {
             border-radius: 56% 44% 42% 58%/51% 55% 45% 49%
