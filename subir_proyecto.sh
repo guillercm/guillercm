@@ -1,13 +1,15 @@
 git config --global user.name "guillercm"
 git config --global user.email "guillermo.ruiz.cortina.martinez@gmail.com"
 
-git branch -m master main
+
 
 git init
 
 git add .
 
 git commit -m "first commit"
+
+git branch -m master main
 
 git push -u origin main --force
 
