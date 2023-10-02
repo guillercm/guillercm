@@ -361,7 +361,7 @@ let dataJson = {
         }
     },
     "tecnologias": [
-        "html", "css", "javascript", "angular", "mysql", "spring boot", "c#"
+        "html", "css", "javascript", "angular", "spring boot", "mysql", "c#"
     ],
     "tecnologiasAdicionales": [
         "bootstrap", "php", "python", "react", "mongodb", "nodejs", "unity"
