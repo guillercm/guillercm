@@ -94,7 +94,7 @@ for (let pr of dataJson.misProyectos) {
                 <div class="tecnologias d-flex flex-wrap gap-7 mt-3">
                   ${tecnologiasHtml}
                 </div>
-                <a href="${dataJson.redesSociales.gitHub}dsfsf${pr.gitHub}" target="_blank" class="mt-3 btn btn-primary">
+                <a href="${dataJson.redesSociales.gitHub}${pr.gitHub}" target="_blank" class="mt-3 btn btn-primary">
                     <div class="d-flex align-items-center">
                       <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="w-5 fill-primary">
                       <path class="pathGithub"></path>
