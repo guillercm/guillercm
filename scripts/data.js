@@ -361,7 +361,10 @@ let dataJson = {
         }
     },
     "tecnologias": [
-        "html", "css", "bootstrap", "javascript", "php", "java", "python", "angular", "react", "mysql", "mongodb", "nodejs", "spring boot","c#", "unity"
+        "html", "css", "javascript", "angular", "mysql", "spring boot", "c#"
+    ],
+    "tecnologiasAdicionales": [
+        "bootstrap", "php", "python", "react", "mongodb", "nodejs", "unity"
     ],
     "misProyectos": [
         {
@@ -481,10 +484,26 @@ const readmyMd = `
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs?username=${dataJson.datosPersonales.mote}&show_icons=true&locale=es&layout=compact&line_height=20&title_color=7A7ADB&icon_color=2234AE&text_color=D3D3D3&bg_color=0,000000,130F40" width="375" alt="${dataJson.datosPersonales.mote}" title="${dataJson.datosPersonales.mote}"/>
 
+### Las que más domino
 <p align="left">
     ${(() => {
         let tecnologiasHTML = '';
         for (let t of dataJson.tecnologias) {
+            const tec = getTecnologia(t);
+            tecnologiasHTML += 
+            `<a href="${tec.url}" target="_blank" rel="noreferrer" style="text-decoration: none">
+                <img src="${tec.imagen}" alt="${t}" width="40" height="40"/>
+            </a>`
+        }
+        return tecnologiasHTML;
+    })()}
+</p>
+
+### Otras tecnologías
+<p align="left">
+    ${(() => {
+        let tecnologiasHTML = '';
+        for (let t of dataJson.tecnologiasAdicionales) {
             const tec = getTecnologia(t);
             tecnologiasHTML += 
             `<a href="${tec.url}" target="_blank" rel="noreferrer" style="text-decoration: none">

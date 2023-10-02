@@ -251,14 +251,14 @@ body::after {
     a {
         color: var(--color-letra-arena);
     }
-    #tecnologias a, #misProyectos .tecnologias a {
+    #tecnologias2 a, #tecnologias a, #misProyectos .tecnologias a {
         width: 100px;
         min-height: 100px;
         background-color: #dbc06f;
         border-radius: 10px;
     }
 
-    #tecnologias a div div {
+    #tecnologias2 a div div, #tecnologias a div div {
         line-height: 1.2;
     }
     

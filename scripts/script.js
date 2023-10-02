@@ -12,7 +12,7 @@ clickCheckbox = (sw = true) => {
 
 
 
-const mote = dataJson["datosPersonales"]["mote"];
+const mote = dataJson.datosPersonales.mote;
 document.querySelectorAll(".nombre").forEach(elemento => {
   elemento.textContent = mote;
 });
@@ -23,12 +23,12 @@ document.querySelectorAll(".profesion").forEach(elemento => {
 });
 
 descripcionPortafolio.innerHTML = '';
-for (let mensaje of dataJson["descripcionPortafolio"]) {
+for (let mensaje of dataJson.descripcionPortafolio) {
   descripcionPortafolio.innerHTML += `<p>${mensaje}</p>`
 }
 
 estudios.innerHTML = '';
-for (let estudio of dataJson["formacion"]) {
+for (let estudio of dataJson.formacion) {
   estudios.innerHTML += `
   <div class="estudio">
     <h5 class="mb-0">${estudio.nombre}</h5>
@@ -41,7 +41,7 @@ for (let estudio of dataJson["formacion"]) {
 }
 
 tecnologias.innerHTML = '';
-for (let t of dataJson["tecnologias"]) {
+for (let t of dataJson.tecnologias) {
   const tec = getTecnologia(t);
   tecnologias.innerHTML += `
   <a target="_blank" href="${tec.url}" class="text-center">
@@ -53,9 +53,22 @@ for (let t of dataJson["tecnologias"]) {
   `;
 }
 
+tecnologias2.innerHTML = '';
+for (let t of dataJson.tecnologiasAdicionales) {
+  const tec = getTecnologia(t);
+  tecnologias2.innerHTML += `
+  <a target="_blank" href="${tec.url}" class="text-center">
+    <div class="d-flex flex-column align-items-center justify-content-center gap-1 h-100">
+      <img src="${tec.imagen}" alt="${t}" title="${t}" class="img-fluid" style="max-height: 50px;"  width="40" height="40">
+      <div>${t}</div>
+    </div>
+  </a>
+  `;
+}
+
 proyectos.innerHTML = '';
 let i = 1;
-for (let pr of dataJson["misProyectos"]) {
+for (let pr of dataJson.misProyectos) {
   if (!pr.mostrar) continue;
   let tecnologiasHtml = '';
   for (let t of pr.tecnologias) {
@@ -81,7 +94,7 @@ for (let pr of dataJson["misProyectos"]) {
                 <div class="tecnologias d-flex flex-wrap gap-7 mt-3">
                   ${tecnologiasHtml}
                 </div>
-                <a href="${dataJson["redesSociales"]["gitHub"]}/${pr.gitHub}" target="_blank" class="mt-3 btn btn-primary">
+                <a href="${dataJson.redesSociales.gitHub}/${pr.gitHub}" target="_blank" class="mt-3 btn btn-primary">
                     <div class="d-flex align-items-center">
                       <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="w-5 fill-primary">
                       <path class="pathGithub"></path>
@@ -100,22 +113,22 @@ for (let pr of dataJson["misProyectos"]) {
 }
 
 imgCertificados.innerHTML = '';
-for (let cert of dataJson["certificados"]) {
+for (let cert of dataJson.certificados) {
   imgCertificados.innerHTML += 
   `<a href="certificados/${cert.pdf}" target="_blank">
     <img src="certificados/${cert.imagen}" class="img-fluid" alt="${cert.nombre}" title="${cert.nombre}">
   </a>`;
 }
 
-correo.textContent = dataJson["datosPersonales"]["correo"]; 
+correo.textContent = dataJson.datosPersonales.correo; 
 
-ubicacion.textContent = dataJson["datosPersonales"]["ubicacion"]; 
+ubicacion.textContent = dataJson.datosPersonales.ubicacion; 
 
-enlaceGithub.href = dataJson["redesSociales"]["gitHub"];
+enlaceGithub.href = dataJson.datosPersonales.gitHub;
 
-enlaceInfoJobs.href = dataJson["redesSociales"]["infoJobs"];
+enlaceInfoJobs.href = dataJson.datosPersonales.infoJobs;
 
-enlaceLinkedIn.href = dataJson["redesSociales"]["linkedIn"];
+enlaceLinkedIn.href = dataJson.datosPersonales.linkedIn;
 
 dataJson = null;
 
