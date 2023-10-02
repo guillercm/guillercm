@@ -11,11 +11,11 @@
 </h1>
 
 </div>
-<a href="https://guillercm.github.io/guillercm/" target="blank">
+<a href="https://guillercm.github.io/guillercm/" target="_blank">
     <img src="imagenes/fondo.png" title="guillercm (Desarrollador Software)" alt="guillercm (Desarrollador Software)">
 </a>
 <p align="left">
-<a href="" target="blank">
+<a href="" target="_blank">
     <img align="center"
         src="imagenes/iconos/infojobs.png" 
         alt="infoJobs" height="40" width="40" />

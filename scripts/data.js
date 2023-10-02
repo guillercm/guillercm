@@ -453,11 +453,11 @@ const readmyMd = `
 </h1>
 
 </div>
-<a href="${dataJson.datosPersonales.portfolio}" target="blank">
+<a href="${dataJson.datosPersonales.portfolio}" target="_blank">
     <img src="imagenes/fondo.png" title="${dataJson.datosPersonales.mote} (${dataJson.datosPersonales.puesto})" alt="${dataJson.datosPersonales.mote} (${dataJson.datosPersonales.puesto})">
 </a>
 <p align="left">
-<a href="${dataJson.redesSociales.infoJobs}" target="blank">
+<a href="${dataJson.redesSociales.infoJobs}" target="_blank">
     <img align="center"
         src="imagenes/iconos/infojobs.png" 
         alt="infoJobs" height="40" width="40" />
