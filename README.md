@@ -83,17 +83,17 @@
 <table>
     <tr>
                 <td width="50%">
-                    <h3 align="center">royalmon</h3>
+                    <h3 align="center">Royalmon</h3>
                     <div align="center">
-                        <img src="imagenes/proyectos/royalmon.png" width="300" alt="royalmon" title="royalmon">
-                        <p align="left">rrr</p>
+                        <img src="imagenes/proyectos/royalmon.png" width="300" alt="Royalmon" title="Royalmon">
+                        <p align="left">Un juego que combina el mundo de pokemon con el del clash royale. ¡Captura todos los royalmons y consigue todas las medallas de gimnasio!</p>
                         <p align="left">
-                            <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noreferrer">
-                                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html" width="40" height="40"/>
-                                    </a><a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" rel="noreferrer">
-                                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css" width="40" height="40"/>
-                                    </a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
-                                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
+                            <a href="https://angular.io/" target="_blank" rel="noreferrer">
+                                        <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40"/>
+                                    </a><a href="https://spring.io/projects/spring-boot" target="_blank" rel="noreferrer">
+                                        <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring boot" width="40" height="40"/>
+                                    </a><a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
+                                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/>
                                     </a>
                         </p>
                         <p>
