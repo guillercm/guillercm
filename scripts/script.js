@@ -124,11 +124,11 @@ correo.textContent = dataJson.datosPersonales.correo;
 
 ubicacion.textContent = dataJson.datosPersonales.ubicacion; 
 
-enlaceGithub.href = dataJson.datosPersonales.gitHub;
+enlaceGithub.href = dataJson.redesSociales.gitHub;
 
-enlaceInfoJobs.href = dataJson.datosPersonales.infoJobs;
+enlaceInfoJobs.href = dataJson.redesSociales.infoJobs;
 
-enlaceLinkedIn.href = dataJson.datosPersonales.linkedIn;
+enlaceLinkedIn.href = dataJson.redesSociales.linkedIn;
 
 dataJson = null;
 
