@@ -368,10 +368,10 @@ let dataJson = {
     ],
     "misProyectos": [
         {
-            "nombre": "royalmon",
+            "nombre": "Royalmon",
             "imagen": "royalmon.png",
-            "descripcion": "rrr",
-            "tecnologias": ["html", "css", "javascript"],
+            "descripcion": "Un juego que combina el mundo de pokemon con el del clash royale. ¡Captura todos los royalmons y consigue todas las medallas de gimnasio!",
+            "tecnologias": ["angular", "spring boot", "mysql"],
             "mostrar": true,
             "gitHub": "royalmon",
         }

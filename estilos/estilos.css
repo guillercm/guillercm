@@ -315,6 +315,11 @@ body::after {
 
     .card img {
         padding: 20px;
+        transition: 1s;
+    }
+
+    .card .card-img-top:hover {
+        scale: 1.4;
     }
 
     .card:hover {
