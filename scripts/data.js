@@ -374,6 +374,30 @@ let dataJson = {
             "tecnologias": ["angular", "spring boot", "mysql"],
             "mostrar": true,
             "gitHub": "royalmon",
+        },
+        {
+            "nombre": "PlantasVsZombis",
+            "imagen": "plantasVsZombis.png",
+            "descripcion": "Divertido juego de estrategia que consiste en matar a todos los zombis antes de que lleguen a tu casa. Recolecta soles para comprar plantas y defenderte.",
+            "tecnologias": ["html", "css", "javascript"],
+            "mostrar": true,
+            "gitHub": "plantasVsZombis",
+        },
+        {
+            "nombre": "Club náutico",
+            "imagen": "club_nautico.png",
+            "descripcion": "Aplicación para gestionar barcos, sus respectivas salidas con un capitán determinado y con un horario.",
+            "tecnologias": ["angular", "spring boot", "mysql"],
+            "mostrar": true,
+            "gitHub": "club_nautico",
+        },
+        {
+            "nombre": "No He Sido Yo",
+            "imagen": "noHeSidoYo.png",
+            "descripcion": "Un juego online divertido de preguntas de temáticas a elegir sobre hipotéticas situaciones para jugar con tus amigos",
+            "tecnologias": ["html", "css", "javascript", "php", "mysql"],
+            "mostrar": true,
+            "gitHub": "noHeSidoYo",
         }
     ], 
     "certificados": [
@@ -544,7 +568,7 @@ const readmyMd = `
                             })()}
                         </p>
                         <p>
-                            <a href="${dataJson.redesSociales.gitHub}/${pr.gitHub}" target="_blank">
+                            <a href="${dataJson.redesSociales.gitHub}${pr.gitHub}" target="_blank">
                                 <img src="https://img.shields.io/badge/CÓDIGO-ff9?style=for-the-badge&logo=github&logoColor=black">
                             </a>
                         </p>
