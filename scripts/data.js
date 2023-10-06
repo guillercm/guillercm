@@ -541,7 +541,7 @@ const readmyMd = `
 <br>
 
 ## Mis proyectos
-<table>
+
     ${(() => {
         let proyectosHTML = '';
         for (let i = 0; i < dataJson.misProyectos.length; i+=2) {
@@ -574,10 +574,11 @@ const readmyMd = `
                     </div>                                                                             
                 </td>`;
             }
+            proyectosHTML = '<table><tr>' + proyectosHTML + '</tr></table>';
         }
-        return '<tr>' + proyectosHTML + '</tr>';
+        return proyectosHTML;
     })()}
-</table>
+
 <br>
 <!-- 
 ### ⚙️ &nbsp;GitHub Analytics
