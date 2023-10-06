@@ -548,8 +548,7 @@ const readmyMd = `
             let proyectos = [dataJson.misProyectos[i], dataJson.misProyectos[i + 1]];
             for (const pr of proyectos) {
                 if (!pr) continue;
-                proyectosHTML += `
-                <td width="50%">
+                proyectosHTML += `<td width="50%">
                     <h3 align="center">${pr.nombre}</h3>
                     <div align="center">
                         <img src="imagenes/proyectos/${pr.imagen}" width="300" alt="${pr.nombre}" title="${pr.nombre}">
@@ -573,8 +572,7 @@ const readmyMd = `
                             </a>
                         </p>
                     </div>                                                                             
-                </td>
-                `;
+                </td>`;
             }
         }
         return '<tr>' + proyectosHTML + '</tr>';
