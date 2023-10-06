@@ -549,7 +549,7 @@ ${(() => {
             for (const pr of proyectos) {
                 j++;
                 if (!pr) continue;
-                proyectosHTML += (j === 1 ? '<table><tr>' : '') +  `<td width="50%">
+                proyectosHTML += `${(j === 1 ? '<table><tr>' : '')}<td width="50%">
                     <h3 align="center">${pr.nombre}</h3>
                     <div align="center">
                         <img src="imagenes/proyectos/${pr.imagen}" width="300" alt="${pr.nombre}" title="${pr.nombre}">
