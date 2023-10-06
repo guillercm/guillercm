@@ -546,10 +546,11 @@ const readmyMd = `
         let proyectosHTML = '';
         for (let i = 0; i < dataJson.misProyectos.length; i+=2) {
             let proyectos = [dataJson.misProyectos[i], dataJson.misProyectos[i + 1]];
-            proyectosHTML = '<table><tr>' + proyectosHTML;
+            let i = 0;
             for (const pr of proyectos) {
+                i++;
                 if (!pr) continue;
-                proyectosHTML += `<td width="50%">
+                proyectosHTML += (i === 1 ? '<table><tr>' : '') +  `<td width="50%">
                     <h3 align="center">${pr.nombre}</h3>
                     <div align="center">
                         <img src="imagenes/proyectos/${pr.imagen}" width="300" alt="${pr.nombre}" title="${pr.nombre}">
@@ -573,9 +574,8 @@ const readmyMd = `
                             </a>
                         </p>
                     </div>                                                                             
-                </td>`;
+                </td> ${(i === 2 ? '</tr></table>' : '')}`;
             }
-            proyectosHTML += '</tr></table>';
         }
         return proyectosHTML;
     })()}
