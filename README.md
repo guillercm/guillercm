@@ -80,8 +80,8 @@
 <br>
 
 ## Mis proyectos
-<table>
-    <tr><td width="50%">
+
+    <table><tr><table><tr><td width="50%">
                     <h3 align="center">Royalmon</h3>
                     <div align="center">
                         <img src="imagenes/proyectos/royalmon.png" width="300" alt="Royalmon" title="Royalmon">
@@ -121,7 +121,7 @@
                             </a>
                         </p>
                     </div>                                                                             
-                </td><td width="50%">
+                </td></tr></table><td width="50%">
                     <h3 align="center">Club náutico</h3>
                     <div align="center">
                         <img src="imagenes/proyectos/club_nautico.png" width="300" alt="Club náutico" title="Club náutico">
@@ -165,8 +165,8 @@
                             </a>
                         </p>
                     </div>                                                                             
-                </td></tr>
-</table>
+                </td></tr></table>
+
 <br>
 <!-- 
 ### ⚙️ &nbsp;GitHub Analytics
