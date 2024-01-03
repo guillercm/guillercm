@@ -173,7 +173,7 @@
     <script>
     document.getElementById("descargarReadmy").addEventListener("click", function() {
         // Contenido del archivo (puedes cambiarlo según tus necesidades)
-        const contenido = readmyMd;
+        const contenido = getReadmyMd();
 
         // Crear un Blob (objeto binario) con el contenido
         const blob = new Blob([contenido], { type: "text/plain" });
@@ -202,6 +202,7 @@
         profesion.textContent = dataJson.datosPersonales.puesto;
         experienciaLaboral.innerHTML = '';
         for (let exp of dataJson.experienciaLaboral) {
+            if (exp.mostrar === false) continue;
             let descripcionHTML = "";
             for (let desc of exp.descripcion) {
                 descripcionHTML += `<p>${desc}</p>`;

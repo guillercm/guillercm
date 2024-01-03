@@ -437,12 +437,21 @@ let dataJson = {
     ],
     "experienciaLaboral": [
         {
+            "puesto": "Desarrollador",
+            "empresa": "Eviden",
+            "fecha": "Octubre 2023 - Actualidad",
+            "descripcion": [
+                "Trabajando con Angular actualmente en el <u>ministerio de defensa</u>, creo componentes reutilizables necesarios para la creación de distintas aplicaciones para el ministerio.",
+            ]
+        },
+        {
             "puesto": "Desarrollador (prácticas de empresa)",
             "empresa": "Atos",
             "fecha": "Marzo 2023 - Junio 2023",
             "descripcion": [
                 "Mejoré mis habilidades en Angular y Java (Spring Boot)."
-            ]
+            ],
+            "mostrar": false
         },
         {
             "puesto": "Desarrollador",
@@ -458,7 +467,8 @@ let dataJson = {
             "fecha": "Marzo 2022 - Junio 2022",
             "descripcion": [
                 "Actualicé una aplicación de C# y MySQL existente para cubrir los nuevos requisitos, con una comunicación directa con los clientes."
-            ]
+            ],
+            "mostrar": false
         }
     ]
 }
@@ -467,7 +477,7 @@ const getTecnologia = (nombre) => {
     return dataJson["tecnologiasExistentes"][nombre];
 }
 
-const readmyMd = `
+const getReadmyMd = () => `
 <div align="center">
 
 <h1 align="left">Hola 👋, soy <a href="${dataJson.datosPersonales.portfolio}">

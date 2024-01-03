@@ -19,7 +19,7 @@
             ,5
           ];
       
-          let clientX = 0, clientY = 0;
+          let clientX = null, clientY = null;
       
           
           let anchura = window.innerWidth;
@@ -29,7 +29,7 @@
             altura = anchura < 800 ? 300 : 450;
             resetScrollX();
           };
-
+          let last_event = null;
           document.addEventListener('mousemove', (event) => {
             clientX = event.clientX;
             clientY = event.clientY + window.scrollY;
@@ -38,15 +38,18 @@
             const touch = event.touches[0];
             clientX = touch.clientX;
             clientY = touch.clientY + window.scrollY;
+            last_event = "touchstart"
           });
           document.addEventListener('touchmove', (event) => {
             const touch = event.touches[0];
             clientX = touch.clientX;
             clientY = touch.clientY + window.scrollY;
+            last_event = "touchmove"
           });
           document.addEventListener('touchend', (event) => {
-            clientX = 0;
-            clientY = 0;
+            clientX = null;
+            clientY = null;
+            last_event = "touchend"
           });
 
           function numeroAleatorio(minimo, maximo) {
@@ -62,7 +65,6 @@
             let velocidad = 3; 
             let xPez = pez.offsetLeft;
             let yPez = pez.offsetTop;
-            let seguirRaton = false;
             const distanciaHuida = 120; 
             const aumentoScaleX = 0.1;
             let targetX, targetY; 
@@ -78,15 +80,21 @@
             function animar() {
       
               // Calcula la posición del ratón en relación con el centro del pez
+              
+              velocidad = 1.5;
               let xRelativo1 = (pez.offsetLeft + pez.offsetWidth / 2);
               let yRelativo1 = (pez.offsetTop + pez.offsetHeight / 2);
               const xRelativo = targetX - xRelativo1;
               const yRelativo = targetY - yRelativo1;
-              const xRelativoRaton = clientX - xRelativo1;
-              const yRelativoRaton = clientY - yRelativo1;
-              const distanciaAlRaton = Math.sqrt(xRelativoRaton * xRelativoRaton + yRelativoRaton * yRelativoRaton);
+              
               const distanciaAlObjetivo = Math.sqrt(xRelativo * xRelativo + yRelativo * yRelativo);
-              velocidad = distanciaAlRaton < distanciaHuida ? 4 : 1.5;
+            
+              if (clientX !== null && clientY !== null && last_event !== "touchend") {
+                const xRelativoRaton = clientX - xRelativo1;
+                const yRelativoRaton = clientY - yRelativo1;
+                const distanciaAlRaton = Math.sqrt(xRelativoRaton * xRelativoRaton + yRelativoRaton * yRelativoRaton);
+                velocidad = distanciaAlRaton < distanciaHuida ? 4 : 1.5;
+              } 
               if (distanciaAlObjetivo < 10) { // Puedes ajustar este valor
                 let distanciaPared = 20;
                 let height = altura - 20;

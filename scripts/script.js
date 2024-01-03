@@ -113,11 +113,41 @@ for (let pr of dataJson.misProyectos) {
 }
 
 imgCertificados.innerHTML = '';
+let last_dot_clicked = null;
+let last_a = null;
+let suma_ancho = 0;
 for (let cert of dataJson.certificados) {
-  imgCertificados.innerHTML += 
-  `<a href="certificados/${cert.pdf}" target="_blank">
-    <img src="certificados/${cert.imagen}" class="img-fluid" alt="${cert.nombre}" title="${cert.nombre}">
-  </a>`;
+  const a = document.createElement("a");
+  if (suma_ancho) {
+    a.classList.add("oculto");
+  }
+  
+  a.href = `certificados/${cert.pdf}`;
+  a.target = "_blank";
+  a.innerHTML = `<img src="certificados/${cert.imagen}" class="img-fluid" alt="${cert.nombre}" title="${cert.nombre}">`;
+  imgCertificados.appendChild(a);
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
+  const s = suma_ancho;
+  if (suma_ancho) {
+    a.classList.add("oculto");
+    
+  } else {
+    dot.classList.add("active");
+    last_a = a;
+    last_dot_clicked = dot;
+  }
+  dot.onclick = function() {
+    last_a.classList.add("oculto");
+    last_dot_clicked.classList.remove("active");
+    a.classList.remove("oculto");
+    dot.classList.add("active");
+    last_a = a;
+    last_dot_clicked = dot;
+  }
+  suma_ancho = 1;
+  const div_dots = document.getElementById("div-dots");
+  div_dots.appendChild(dot);
 }
 
 correo.textContent = dataJson.datosPersonales.correo; 
