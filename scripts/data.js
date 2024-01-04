@@ -441,7 +441,7 @@ let dataJson = {
             "empresa": "Eviden",
             "fecha": "Octubre 2023 - Actualidad",
             "descripcion": [
-                "Trabajando con Angular actualmente en el <u>ministerio de defensa</u>, creo componentes reutilizables necesarios para la creación de distintas aplicaciones para el ministerio.",
+                "Desarrollo con Angular, para la creación de componentes reutilizables, necesarios en distintas aplicaciones del <u>Ministerio de Defensa</u> con sus respectivos módulos para mostrar sus funcionalidades usando la herramienta del Storybook.",
             ]
         },
         {
