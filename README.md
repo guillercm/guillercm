@@ -20,7 +20,7 @@
         src="imagenes/iconos/infojobs.png" 
         alt="infoJobs" height="40" width="40" />
 </a>
-<a href="" target="blank">
+<a href="linkedin.com/in/guillermo-ruíz-cortina-martínez-032b75295" target="blank">
     <img align="center"
         src="imagenes/iconos/linkedin.png" 
         alt="linkedIn" height="40" width="40" />

@@ -11,7 +11,7 @@ let dataJson = {
         "portfolio": "https://guillercm.github.io/guillercm/"
     },
     "redesSociales": {
-        "linkedIn": "",
+        "linkedIn": "linkedin.com/in/guillermo-ruíz-cortina-martínez-032b75295",
         "infoJobs": "",
         "gitHub": "https://github.com/guillercm/"
     },
@@ -441,7 +441,7 @@ let dataJson = {
             "empresa": "Eviden",
             "fecha": "Octubre 2023 - Actualidad",
             "descripcion": [
-                "Desarrollo con Angular, para la creación de componentes reutilizables, necesarios en distintas aplicaciones del <u>Ministerio de Defensa</u> con sus respectivos módulos para mostrar sus funcionalidades usando la herramienta del Storybook.",
+                "Desarrollo con Angular, para la creación de componentes reutilizables, necesarios en distintas aplicaciones del Ministerio de Defensa con sus respectivos módulos para mostrar sus funcionalidades usando la herramienta del Storybook.",
             ]
         },
         {
