@@ -11,7 +11,7 @@ let dataJson = {
         "portfolio": "https://guillercm.github.io/guillercm/"
     },
     "redesSociales": {
-        "linkedIn": "linkedin.com/in/guillermo-ruíz-cortina-martínez-032b75295",
+        "linkedIn": "https://linkedin.com/in/guillermo-ruíz-cortina-martínez-032b75295",
         "infoJobs": "",
         "gitHub": "https://github.com/guillercm/"
     },
