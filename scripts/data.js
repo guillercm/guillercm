@@ -494,11 +494,15 @@ const getReadmyMd = () => `
     <img src="imagenes/fondo.png" title="${dataJson.datosPersonales.mote} (${dataJson.datosPersonales.puesto})" alt="${dataJson.datosPersonales.mote} (${dataJson.datosPersonales.puesto})">
 </a>
 <p align="left">
-<a href="${dataJson.redesSociales.infoJobs}" target="_blank">
-    <img align="center"
+${(() => {
+    return dataJson.redesSociales.infoJobs ? `
+    <a href="${dataJson.redesSociales.infoJobs}" target="_blank">
+        <img align="center"
         src="imagenes/iconos/infojobs.png" 
         alt="infoJobs" height="40" width="40" />
-</a>
+    </a>` : ''
+})()}
+
 <a href="${dataJson.redesSociales.linkedIn}" target="blank">
     <img align="center"
         src="imagenes/iconos/linkedin.png" 

@@ -15,11 +15,8 @@
     <img src="imagenes/fondo.png" title="guillercm (Desarrollador Software)" alt="guillercm (Desarrollador Software)">
 </a>
 <p align="left">
-<a href="" target="_blank">
-    <img align="center"
-        src="imagenes/iconos/infojobs.png" 
-        alt="infoJobs" height="40" width="40" />
-</a>
+
+
 <a href="https://linkedin.com/in/guillermo-ruíz-cortina-martínez-032b75295" target="blank">
     <img align="center"
         src="imagenes/iconos/linkedin.png" 
