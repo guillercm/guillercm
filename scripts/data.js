@@ -20,7 +20,7 @@ let dataJson = {
     ],
     "descripcionPortafolio": [
         "¡Hola! Me llamo Guillermo Ruiz-Cortina Martínez, y soy un apasionado de la programación. Disfruto trabajando con diferentes tecnologías, desde lenguajes de programación puros como JavaScript hasta el uso de frameworks y librerías populares como Angular y React.",
-        "Aunque actualmente me considero un programador junior, mi dedicación y pasión por la programación me han llevado a aprender constantemente desarrollando mis propios proyectos. Cuando me enfrento a desafíos o problemas, me sumerjo en ellos hasta encontrar la solución que busco."
+        "Mi dedicación y pasión por la programación me han llevado a aprender constantemente desarrollando mis propios proyectos. Cuando me enfrento a desafíos o problemas, me sumerjo en ellos hasta encontrar la solución que busco."
     ],
     "formacion": [
         {
@@ -394,7 +394,7 @@ let dataJson = {
         {
             "nombre": "No He Sido Yo",
             "imagen": "noHeSidoYo.png",
-            "descripcion": "Un juego online divertido de preguntas de temáticas a elegir sobre hipotéticas situaciones para jugar con tus amigos",
+            "descripcion": "Un juego online divertido de preguntas de temáticas a elegir sobre hipotéticas situaciones para jugar con tus amigos.",
             "tecnologias": ["html", "css", "javascript", "php", "mysql"],
             "mostrar": true,
             "gitHub": "noHeSidoYo",

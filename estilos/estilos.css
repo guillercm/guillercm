@@ -58,18 +58,18 @@ body {
 }
 
 body::after {
-  content: ""; /* Agrega un contenido vacío al pseudo-elemento */
-  position: fixed; /* Establece la posición fija para el pseudo-elemento */
-  top: 0; /* Ajusta la posición superior al nivel deseado */
-  left: 0; /* Ajusta la posición izquierda al nivel deseado */
+  content: ""; /* Agrega un contenido vacÃ­o al pseudo-elemento */
+  position: fixed; /* Establece la posiciÃ³n fija para el pseudo-elemento */
+  top: 0; /* Ajusta la posiciÃ³n superior al nivel deseado */
+  left: 0; /* Ajusta la posiciÃ³n izquierda al nivel deseado */
   width: 100%; /* Ocupa todo el ancho de la ventana */
   height: 100%; /* Ocupa todo el alto de la ventana */
-  pointer-events: none; /* Evita que el pseudo-elemento afecte la interacción del usuario */
+  pointer-events: none; /* Evita que el pseudo-elemento afecte la interacciÃ³n del usuario */
 }
 
 .navbar {
-  background-color: var(--arena2) !important;
-  border-bottom: 3px solid #7d4807;
+  background-color: #194846 !important;
+  border-bottom: 4px solid #1a877e;
   position: relative;
   z-index: 4;
   padding: 17px 0 17px 0;
@@ -91,7 +91,7 @@ body::after {
 }
 
 .navbar a {
-  color: var(--color-letra-arena);
+  color: white !important;
   position: relative;
   font-size: 22px;
 }
@@ -138,7 +138,7 @@ body::after {
   left: calc(50% - 100px);
   top: calc(50% - 50px);
   /* animation: nadar 5s linear infinite; */
-  /*transition: transform 0.2s;  Añade una transición suave */
+  /*transition: transform 0.2s;  AÃ±ade una transiciÃ³n suave */
 }
 .decoracionMarina {
   background-repeat: no-repeat;
@@ -202,7 +202,7 @@ body::after {
   text-align: center; /* Centra el contenido dentro de la burbuja */
   line-height: 60px; /* Alinea verticalmente el contenido */
   color: #fff; /* Color del texto dentro de la burbuja */
-  font-size: 18px; /* Tamaño del texto */
+  font-size: 18px; /* TamaÃ±o del texto */
   font-weight: bold; /* Estilo de fuente en negrita */
   background: rgb(49 102 196 / 43%);
   background: radial-gradient(
@@ -328,7 +328,7 @@ a {
   transition: 0.2s;
   width: 310px !important;
   max-width: 100%;
-  /* min-width: 100%; */
+  overflow: hidden;
 }
 
 .card img {
