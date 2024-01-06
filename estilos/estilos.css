@@ -359,6 +359,10 @@ a .iconosContacto {
   cursor: pointer;
 }
 
+#contacto a {
+  text-decoration: underline;
+}
+
 div.scroll-container {
   background-color: #33333352;
   /* overflow: auto; */
