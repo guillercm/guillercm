@@ -8,11 +8,11 @@
     canvas.style.zIndex = 99 */
   /* --arena: rgba(230,137,37,1); 
     --arena2: #cc7517; */
-  --arena: #e9b824;
-  --arena2: #ee9322;
+  --arena: #1a1a23;
+  --arena2: #1a1a23;
   --agua: #219c90;
   --agua2: #5d6ea0;
-  --color-letra-arena: #393535;
+  --color-letra-arena: #ffc53c;
 }
 
 * {
@@ -234,11 +234,12 @@ body::after {
   width: 150px;
   height: 150px;
   z-index: 3;
-  transition: 1s;
+  transition: 0.5s;
 }
 .burbujaPrincipal:hover {
   width: 300px;
   height: 300px;
+  transition: 0.8s;
 }
 .burbujaPrincipal:hover .profesion {
   display: block;
@@ -273,7 +274,7 @@ a {
 #misProyectos .tecnologias a {
   width: 100px;
   min-height: 100px;
-  background-color: #dbc06f;
+  background-color: #60573c;
   border-radius: 10px;
 }
 
@@ -320,7 +321,7 @@ a {
 }
 
 .card {
-  background-color: var(--agua2);
+  background-color: #333c58;
   color: rgb(230, 237, 243);
   -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
@@ -329,6 +330,7 @@ a {
   width: 310px !important;
   max-width: 100%;
   overflow: hidden;
+  transition: 0.5s;
 }
 
 .card img {
@@ -341,9 +343,10 @@ a {
 }
 
 .card:hover {
-  -webkit-box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 30px 3px #9f9f9fbf;
+  -moz-box-shadow: 0px 0px 30px 3px #9f9f9fbf;
+  box-shadow: 0px 0px 30px 3px #9f9f9fbf;
+  transition: 0.7s;
 }
 
 #proyectos .tecnologias img {
@@ -353,7 +356,7 @@ a {
 .iconosContacto,
 .iconosContacto svg {
   width: 25px;
-  fill: black;
+  fill: white;
 }
 a .iconosContacto {
   cursor: pointer;
@@ -364,7 +367,7 @@ a .iconosContacto {
 }
 
 div.scroll-container {
-  background-color: #33333352;
+  background-color: transparent;
   /* overflow: auto; */
   border-radius: 6px;
   white-space: nowrap;

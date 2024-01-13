@@ -8,13 +8,32 @@
   <!-- <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> -->
   <link rel="stylesheet" class="hrefVersion" href="estilos/estilos.css">
   <link rel="shortcut icon" class="hrefVersion" href="imagenes/perfil.png" />
+  <script src="scripts/data.js" class="srcVersion" type="text/javascript"></script>
+  <script src="scripts/peces.js" class="srcVersion" type="text/javascript" ></script>
+  <script src="scripts/script.js" class="srcVersion" type="text/javascript" ></script>
+  <script>
+
+    const scriptElements = document.querySelectorAll('.srcVersion');
+
+    scriptElements.forEach((script) => {
+      script.src += `?v=${version}`;
+      script.classList.remove("srcVersion");
+    });
+
+    const linkElements = document.querySelectorAll('.hrefVersion');
+
+    linkElements.forEach((link) => {
+      link.href += `?v=${version}`;
+      link.classList.remove("hrefVersion");
+    });
+
+  </script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
 </head>
 <body>
   <input type="checkbox" class="d-none" id="checkbox">
   <nav class="navbar navbar-expand-lg bg-body-tertiary prevent-select">
     <div class="container-fluid justify-content-around">
-      
       <a class="navbar-brand nombre" onclick="clickCheckbox(false)" href="#"></a>
       <a class="navbar-brand enlaceOcultar" onclick="clickCheckbox()" href="#inicio">Sobre mi</a>
       <a class="navbar-brand enlaceOcultar" onclick="clickCheckbox()" href="#misProyectos">Mis Proyectos</a>
@@ -25,7 +44,6 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path></svg>
         </a>
       </label>
-      
     </div>
   </nav>
   
@@ -148,29 +166,10 @@
         <img src="imagenes/iconos/linkedin.png" alt="LinkedIn" title="LinkedIn" class="iconosContacto img-fluid me-2" style="max-height: 24px;">
       </a>
     </div>
-    
   </div>
   
-  <script src="scripts/data.js" class="srcVersion" type="text/javascript"></script>
-  <script src="scripts/script.js" class="srcVersion" type="text/javascript" ></script>
-  <script src="scripts/peces.js" class="srcVersion" type="text/javascript" ></script>
-  <script>
-
-    const scriptElements = document.querySelectorAll('.srcVersion');
-
-    scriptElements.forEach((script) => {
-      script.src += `?v=${version}`;
-      script.classList.remove("srcVersion");
-    });
-
-    const linkElements = document.querySelectorAll('.hrefVersion');
-
-    linkElements.forEach((link) => {
-      link.href += `?v=${version}`;
-      link.classList.remove("hrefVersion");
-    });
-
-  </script>
+  
+  
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
