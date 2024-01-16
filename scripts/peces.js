@@ -5,11 +5,15 @@ const setPeces = () => {
   let clientX = null,
     clientY = null;
 
-  let anchura = window.innerWidth;
-  let altura = anchura < 800 ? 300 : 450;
+  let anchura = null;
+  getAltura = () => {
+    anchura = window.innerWidth;
+    return (anchura < 800 ? 300 : 450) - 40;
+  };
+  let altura = getAltura();
   window.onresize = function (event) {
     anchura = window.innerWidth;
-    altura = anchura < 800 ? 300 : 450;
+    altura = getAltura();
     resetScrollX();
   };
   let last_event = null;

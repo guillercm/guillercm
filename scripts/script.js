@@ -87,7 +87,9 @@ window.onload = () => {
   <!-- Proyecto ${i} -->
           <div class="col-md-4">
             <div class="card mb-4">
-              <img src="imagenes/proyectos/${pr.imagen}" class="card-img-top" alt="${pr.nombre}">
+              <div class="card-div-img">
+                <img src="imagenes/proyectos/${pr.imagen}" class="card-img-top" alt="${pr.nombre}">
+              </div>
               <div class="card-body">
                 <h4 class="card-title">${pr.nombre}</h4>
                 <p class="card-text small">${pr.descripcion}</p>
