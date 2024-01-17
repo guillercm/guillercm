@@ -6,7 +6,7 @@ const setPeces = () => {
     clientY = null;
 
   let anchura = null;
-  getAltura = () => {
+  const getAltura = () => {
     anchura = window.innerWidth;
     return (anchura < 800 ? 300 : 450) - 40;
   };
