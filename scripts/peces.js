@@ -7,8 +7,9 @@ const setPeces = () => {
 
   let anchura = null;
   const getAltura = () => {
-    anchura = window.innerWidth;
-    return (anchura < 800 ? 300 : 450) - 40;
+    const anchoPantalla = window.innerWidth;
+    anchura = anchoPantalla - (anchoPantalla < 800 ? 120 : 50);
+    return anchoPantalla < 800 ? 210 : 560;
   };
   let altura = getAltura();
   window.onresize = function (event) {
