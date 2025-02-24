@@ -1,8 +1,6 @@
 
 <div align="center">
 
-> [!NOTE]
-> Nota
 
 <h1 align="left">Hola 👋, soy <a href="https://guillercm.github.io/guillercm/">
 <span>
