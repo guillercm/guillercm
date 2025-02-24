@@ -1,6 +1,9 @@
 
 <div align="center">
 
+> [!NOTE]
+> Nota
+
 <h1 align="left">Hola 👋, soy <a href="https://guillercm.github.io/guillercm/">
 <span>
     <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2500&pause=500&width=435&lines=guillercm;Desarrollador+Software" alt="guillercm" title="guillercm"
