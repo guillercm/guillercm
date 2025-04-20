@@ -1,0 +1,79 @@
+export interface Config {
+  personalData: PersonalData;
+  socialNetworks: SocialNetworks;
+  resume: {
+    description: string;
+  };
+  portfolio: {
+    description: string;
+  };
+  training: Training[];
+  technologies: Technologies;
+  projects: Project[];
+  certificates: Certificate[];
+  workExperience: WorkExperience[];
+}
+
+export interface Certificate {
+  name: string;
+  date?: string;
+  description: string;
+  image: string;
+  pdf: string;
+}
+
+export interface WorkExperience {
+  position: string;
+  company: string;
+  date: string;
+  description: string[];
+  show?: boolean;
+}
+
+export interface PersonalData {
+  nickname: string;
+  name: string;
+  surnames: Surnames;
+  phone: string;
+  email: string;
+  location: string;
+  position: string;
+  portfolio: string;
+}
+
+export interface Surnames {
+  first: string;
+  second: string;
+}
+
+export interface Project {
+  name: string;
+  image: string;
+  description: string;
+  tecnologias: string[];
+  show: boolean;
+  gitHub: string;
+}
+
+export interface SocialNetworks {
+  linkedIn: string;
+  infoJobs: string;
+  gitHub: string;
+}
+
+export interface Technologies {
+  all: { [key: string]: DataAllTechnology };
+}
+
+export interface DataAllTechnology {
+  image: string;
+  url: string;
+}
+
+export interface Training {
+  name: string;
+  acronym: string;
+  institute: string;
+  date: string;
+}
+
