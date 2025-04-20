@@ -13,14 +13,14 @@
 
 </div>
 <a href="https://guillercm.github.io/guillercm/" target="_blank">
-    <img src="imagenes/fondo.png" title="guillercm (Desarrollador Software)" alt="guillercm (Desarrollador Software)">
+    <img src="docs/imagenes/fondo.png" title="guillercm (Desarrollador Software)" alt="guillercm (Desarrollador Software)">
 </a>
 <p align="left">
 
 
 <a href="https://linkedin.com/in/guillermo-ruíz-cortina-martínez-032b75295" target="blank">
     <img align="center"
-        src="imagenes/iconos/linkedin.png" 
+        src="docs/imagenes/iconos/linkedin.png" 
         alt="linkedIn" height="40" width="40" />
 </a>
 </p>
@@ -81,7 +81,7 @@
 <table><tr><table><tr><td width="50%">
                     <h3 align="center">Royalmon</h3>
                     <div align="center">
-                        <img src="imagenes/proyectos/royalmon.png" width="300" alt="Royalmon" title="Royalmon">
+                        <img src="docs/imagenes/proyectos/royalmon.png" width="300" alt="Royalmon" title="Royalmon">
                         <p align="left">Un juego que combina el mundo de pokemon con el del clash royale. ¡Captura todos los royalmons y consigue todas las medallas de gimnasio!</p>
                         <p align="left">
                             <a href="https://angular.io/" target="_blank" rel="noreferrer">
@@ -101,7 +101,7 @@
                 </td> <td width="50%">
                     <h3 align="center">PlantasVsZombis</h3>
                     <div align="center">
-                        <img src="imagenes/proyectos/plantasVsZombis.png" width="300" alt="PlantasVsZombis" title="PlantasVsZombis">
+                        <img src="docs/imagenes/proyectos/plantasVsZombis.png" width="300" alt="PlantasVsZombis" title="PlantasVsZombis">
                         <p align="left">Divertido juego de estrategia que consiste en matar a todos los zombis antes de que lleguen a tu casa. Recolecta soles para comprar plantas y defenderte.</p>
                         <p align="left">
                             <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noreferrer">
@@ -121,7 +121,7 @@
                 </td> </tr></table><table><tr><td width="50%">
                     <h3 align="center">Club náutico</h3>
                     <div align="center">
-                        <img src="imagenes/proyectos/club_nautico.png" width="300" alt="Club náutico" title="Club náutico">
+                        <img src="docs/imagenes/proyectos/club_nautico.png" width="300" alt="Club náutico" title="Club náutico">
                         <p align="left">Aplicación para gestionar barcos, sus respectivas salidas con un capitán determinado y con un horario.</p>
                         <p align="left">
                             <a href="https://angular.io/" target="_blank" rel="noreferrer">
@@ -141,7 +141,7 @@
                 </td> <td width="50%">
                     <h3 align="center">No He Sido Yo</h3>
                     <div align="center">
-                        <img src="imagenes/proyectos/noHeSidoYo.png" width="300" alt="No He Sido Yo" title="No He Sido Yo">
+                        <img src="docs/imagenes/proyectos/noHeSidoYo.png" width="300" alt="No He Sido Yo" title="No He Sido Yo">
                         <p align="left">Un juego online divertido de preguntas de temáticas a elegir sobre hipotéticas situaciones para jugar con tus amigos</p>
                         <p align="left">
                             <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noreferrer">
