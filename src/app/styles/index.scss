@@ -1,3 +1,5 @@
-@import "tailwindcss";
+@use "tailwindcss";
+@use "theme";
+@use "section-home";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));

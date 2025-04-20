@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ItemMenuComponent } from '../item-menu/item-menu.component';
+import { ItemMenu } from '@core/interfaces/menu/item-menu.interface';
 
 @Component({
   selector: 'app-sidemenu',
@@ -12,6 +13,28 @@ import { ItemMenuComponent } from '../item-menu/item-menu.component';
 })
 export class SidemenuComponent {
 
+  private _movilMenuIsOpen = signal<boolean>(false);
+
+  protected readonly movilMenuIsOpen = this._movilMenuIsOpen.asReadonly();
+
+  protected openMovilMenu() {
+    this._movilMenuIsOpen.set(true);
+  }
+
+  protected closeMovilMenu() {
+    this._movilMenuIsOpen.set(false);
+  }
+
+  protected readonly menuItems: ItemMenu[] = [
+    {
+      label: 'Inicio',
+      sectionId: 'inicio'
+    },
+    {
+      label: 'Sobre mí',
+      sectionId: 'sobre-mi'
+    }
+  ]
   public readonly sections = [
     {
       label: "Sobre mí"

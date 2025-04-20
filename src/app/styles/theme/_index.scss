@@ -1,0 +1,24 @@
+@use "tailwindcss";
+
+// @theme {
+//   --color-primary: #1a1a23;
+//   --color-primary-hover: #1a1a23;
+//   --color-secondary: #ffc53c;
+// }
+
+.bg-primary {
+  @apply bg-indigo-900;
+}
+
+.bg-primary-hover:hover {
+  background-color: #3f3f54;
+}
+
+.text-primary {
+  @apply text-white;
+
+}
+
+.text-secondary {
+  @apply text-amber-500;
+}

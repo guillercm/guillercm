@@ -1,53 +1,21 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, OnInit, signal } from '@angular/core';
-import { SharedClickOutsideDirective } from '@shared/directives/click-outside/shared-click-outside.directive';
+import { Component, input } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ItemMenu } from '@core/interfaces/menu/item-menu.interface';
 
 @Component({
   selector: 'core-item-menu',
-  imports: [CommonModule, SharedClickOutsideDirective],
+  imports: [CommonModule, RouterModule],
   templateUrl: './item-menu.component.html',
   styleUrl: './item-menu.component.css',
   host: {
     class: 'relative'
   }
 })
-export class ItemMenuComponent implements OnInit {
-  //   this._menuClasses.set("opacity-0 hidden translate-y-1");
-  // }
+export class ItemMenuComponent {
 
-  private _isOpen = signal<boolean>(false);
+  public data = input.required<ItemMenu>();
 
-  protected readonly isOpen = this._isOpen.asReadonly();
+  public type = input<'default' | 'movil'>('default');
 
-  protected readonly menuClasses = computed(() =>
-    this.isOpen()
-      ? 'transition ease-out duration-200 opacity-100 translate-y-0'
-      : 'transition ease-in duration-150 opacity-0 translate-y-1'
-  )
-
-  ngOnInit(): void {
-    this.initialize();
-  }
-
-  private initialize() { }
-
-  protected toggleMenu() {
-    this._isOpen.update((value) => !value)
-  }
-
-  protected closeMenu() {
-    this._isOpen.set(false);
-  }
-
-  clickOutside(clickOutside: boolean) {
-    if (clickOutside) this.closeMenu();
-  }
-
-  // showMenu() {
-  //   this._menuClasses.set("opacity-100 translate-y-0");
-  // }
-
-  // hideMenu() {
-  //   this._menuClasses.set("opacity-0 hidden translate-y-1");
-  // }
 }
