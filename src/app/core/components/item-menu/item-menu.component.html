@@ -1,7 +1,7 @@
 
 @switch (type()) {
   @case ('default') {
-    <a [routerLink]="[]" [fragment]="data().sectionId" class="text-sm/6 font-semibold text-primary">{{data().label | uppercase}}</a>
+    <a [routerLink]="[]" [fragment]="data().sectionId" class="font-semibold text-primary">{{data().label | uppercase}}</a>
   }@case ('movil') {
     <a [routerLink]="[]" [fragment]="data().sectionId"
     class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-primary bg-primary-hover">{{data().label}}</a>

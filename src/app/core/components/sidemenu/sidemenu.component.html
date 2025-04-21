@@ -9,7 +9,7 @@
     </div> -->
     <div class=" lg:hidden" [class.hidden]="movilMenuIsOpen()">
       <button (click)="openMovilMenu()" type="button"
-        class="-m-2.5 inline-flex items-center justify-end rounded-md p-2.5 text-gray-700">
+        class="-m-2.5 inline-flex items-center justify-end rounded-md p-2.5 text-gray-700 cursor-pointer">
         <span class="sr-only">Open main menu</span>
         <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"
           data-slot="icon">
@@ -30,7 +30,7 @@
   <div class="lg:hidden" role="dialog" aria-modal="true">
     <!-- Background backdrop, show/hide based on slide-over state. -->
     @if (movilMenuIsOpen()) {
-    <div [class.hidden]="!movilMenuIsOpen()" class="fixed inset-0 z-10" (click)="closeMovilMenu()"></div>
+    <div [class.hidden]="!movilMenuIsOpen()" class="fixed inset-0 z-10 " (click)="closeMovilMenu()"></div>
     <div
     [class.hidden]="!movilMenuIsOpen()"
       class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-primary px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -40,7 +40,7 @@
           <img class="h-8 w-auto" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
             alt="">
         </a> -->
-        <button type="button" class="-m-2.5 rounded-md p-2.5 text-primary" (click)="closeMovilMenu()">
+        <button type="button" class="-m-2.5 rounded-md p-2.5 text-primary cursor-pointer" (click)="closeMovilMenu()">
           <span class="sr-only">Close menu</span>
           <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             aria-hidden="true" data-slot="icon">
