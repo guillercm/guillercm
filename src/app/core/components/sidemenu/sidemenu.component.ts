@@ -33,11 +33,10 @@ export class SidemenuComponent {
     {
       label: 'Sobre mí',
       sectionId: 'sobre-mi'
-    }
-  ]
-  public readonly sections = [
+    },
     {
-      label: "Sobre mí"
+      label: 'Proyectos',
+      sectionId: 'proyectos'
     }
   ]
 

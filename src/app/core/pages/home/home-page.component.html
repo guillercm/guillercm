@@ -1,10 +1,23 @@
 
 @if (config()) {
+  @let classes = "mx-auto max-w-screen-lg mt-10 px-8 py-12";
   <core-home-section [personalData]="config()!.personalData"></core-home-section>
-  <core-about-me-section [description]="config()!.portfolio.description"></core-about-me-section>
+  <div [ngClass]="classes">
+    <core-about-me-section [description]="config()!.portfolio.description"></core-about-me-section>
+  </div>
+  <div [ngClass]="classes">
+    <core-projects-section></core-projects-section>
+  </div>
+
 }
 
-<!-- https://tailwindcss.com/docs/dark-mode
-https://tailwindcss.com/plus/ui-blocks/marketing/elements/headers
-https://leomoreno.vercel.app/#inicio
-https://www.tailawesome.com/resources/astro-boilerplate -->
+<!--
+  https://tailwindcss.com/docs/dark-mode
+  https://tailwindcss.com/plus/ui-blocks/marketing/elements/headers
+  https://leomoreno.vercel.app/#inicio
+  https://www.tailawesome.com/resources/astro-boilerplate
+  https://www.reyesrondon.dev/es
+  https://portfolio-ulises-castro.vercel.app/#Proyectos
+  https://pagedone.io/icons
+  https://mezcalito.vercel.app/
+-->
