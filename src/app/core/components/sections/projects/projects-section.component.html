@@ -1,68 +1,31 @@
-@let animateGradientBorder = "[background:linear-gradient(45deg,#172033,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border border-transparent animate-border block";
+@let animateGradientBorder =
+"[background:linear-gradient(45deg,#172033,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border border-transparent animate-border block";
 <div class="grid grid-cols md:grid-cols-2 gap-5 mt-6">
-  <div class="project-container">
+  @for (project of projects(); let even = $even; track $index) {
+  <div class="project-container" [class.revealLeft]="even" [class.revealRight]="!even">
     <div class=" shadow-md rounded-lg shadow-md overflow-hidden" [ngClass]="animateGradientBorder">
-      <img src="static/img/me.png" alt="Proyecto 1"
-      class="w-full h-48 object-cover">
-    <div class="p-6">
-      <h3 class="text-xl font-semibold text-primary mb-2">Nombre del Proyecto 1</h3>
-      <p class="text-gray-600 text-sm mb-4 text-primary">Una breve descripción atractiva de este proyecto destacando
-        sus características principales y el problema que resuelve.</p>
-      <div class="flex flex-wrap gap-2 mb-4">
-        <div class="flex items-center bg-blue-100 text-blue-800 text-xs font-semibold rounded-full px-2 py-1">
-          <img src="https://via.placeholder.com/20/2196F3/FFFFFF?Text=HTML" alt="HTML" class="w-4 h-4 mr-1"> HTML
+      <img [src]="'static/img/projects/' + project.image" alt="Proyecto 1" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-primary mb-2">{{ project.name }}</h3>
+        <p class="text-gray-600 text-sm mb-4 text-primary">{{ project.description }}</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          @for (tecnology of project.technologies; track $index) {
+          <div [title]="tecnology"
+            class="flex items-center bg-blue-100 text-blue-800 text-sm font-semibold rounded-full px-2 py-1">
+            <img [src]="tecnology | imgTecnology" [alt]="tecnology" class="w-4 h-4 mr-1">{{tecnology}}
+          </div>
+          }
         </div>
-        <div class="flex items-center bg-blue-100 text-blue-800 text-xs font-semibold rounded-full px-2 py-1">
-          <img src="https://via.placeholder.com/20/2196F3/FFFFFF?Text=CSS" alt="CSS" class="w-4 h-4 mr-1"> CSS
+        <hr class="w-full h-[3px] mt-4 mb-4 bg-primary border-none opacity-85">
+        <div class="flex gap-2 justify-center sm:justify-end">
+          <core-action-button type="video"></core-action-button>
+          <core-action-button type="preview"></core-action-button>
+          <core-action-button [url]="project.actions.gitHub"></core-action-button>
         </div>
-        <div class="flex items-center bg-green-100 text-green-800 text-xs font-semibold rounded-full px-2 py-1">
-          <img src="https://via.placeholder.com/20/4CAF50/FFFFFF?Text=JS" alt="JavaScript" class="w-4 h-4 mr-1">
-          JavaScript
-        </div>
-      </div>
-      <hr class="w-full h-[3px] mt-4 mb-4 bg-primary border-none opacity-85">
-      <div class="flex justify-center sm:justify-end gap-2 sm:gap-5">
-        <button type="button"
-        [ngClass]="animateGradientBorder"
-          class="btn-video hover:opacity-60 hover:scale-105 hover:-translate-z-1 transition duration-500 ease-in-out cursor-pointer text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mb-2">
-          <svg class="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M7 14C7 11.1911 7 9.78661 7.67412 8.77772C7.96596 8.34096 8.34096 7.96596 8.77772 7.67412C9.78661 7 11.1911 7 14 7C16.8089 7 18.2134 7 19.2223 7.67412C19.659 7.96596 20.034 8.34096 20.3259 8.77772C21 9.78661 21 11.1911 21 14C21 16.8089 21 18.2134 20.3259 19.2223C20.034 19.659 19.659 20.034 19.2223 20.3259C18.2134 21 16.8089 21 14 21C11.1911 21 9.78661 21 8.77772 20.3259C8.34096 20.034 7.96596 19.659 7.67412 19.2223C7 18.2134 7 16.8089 7 14Z"
-              stroke="white" stroke-width="null"></path>
-            <path
-              d="M7 18C4.79086 18 3 16.2091 3 14V10.5C3 7.21252 3 5.56878 3.90796 4.46243C4.07418 4.25989 4.25989 4.07418 4.46243 3.90796C5.56878 3 7.21252 3 10.5 3H14C16.2091 3 18 4.79086 18 7"
-              stroke="white" stroke-width="null"></path>
-            <path
-              d="M15.0834 12.3162C16.3392 13.0412 16.967 13.4037 16.9984 13.942C17.0006 13.9808 17.0006 14.0196 16.9984 14.0583C16.967 14.5966 16.3392 14.9591 15.0834 15.6841C13.8277 16.4091 13.1998 16.7716 12.7179 16.5296C12.6833 16.5122 12.6497 16.4928 12.6172 16.4715C12.1667 16.1752 12.1667 15.4502 12.1667 14.0002C12.1667 12.5502 12.1667 11.8252 12.6172 11.5289C12.6497 11.5075 12.6833 11.4881 12.7179 11.4707C13.1998 11.2287 13.8277 11.5912 15.0834 12.3162Z"
-              stroke="white" stroke-width="null"></path>
-          </svg>
-        </button>
-        <button type="button"
-        [ngClass]="animateGradientBorder"
-          class="btn-preview hover:opacity-60 hover:scale-105 hover:-translate-z-1 transition duration-500 ease-in-out cursor-pointer text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mb-2">
-          <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke="white"
-              d="M2.45448 13.8008C1.84656 12.6796 1.84656 11.3204 2.45447 10.1992C4.29523 6.80404 7.87965 4.5 11.9999 4.5C16.1202 4.5 19.7046 6.80404 21.5454 10.1992C22.1533 11.3204 22.1533 12.6796 21.5454 13.8008C19.7046 17.196 16.1202 19.5 11.9999 19.5C7.87965 19.5 4.29523 17.196 2.45448 13.8008Z">
-            </path>
-            <path stroke="white"
-              d="M15.0126 11.9551C15.0126 13.6119 13.6695 14.9551 12.0126 14.9551C10.3558 14.9551 9.01263 13.6119 9.01263 11.9551C9.01263 10.2982 10.3558 8.95508 12.0126 8.95508C13.6695 8.95508 15.0126 10.2982 15.0126 11.9551Z">
-            </path>
-          </svg>
-        </button>
-        <button type="button"
-        [ngClass]="animateGradientBorder"
-          class="btn-github hover:opacity-60 hover:scale-105 hover:-translate-z-1 transition duration-500 ease-in-out cursor-pointer text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mb-2">
-          <svg class="w-4 h-4 sm:w-6 sm:h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-            viewBox="0 0 20 20">
-            <path fill-rule="evenodd"
-              d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
-              clip-rule="evenodd" />
-          </svg>
-        </button>
       </div>
     </div>
   </div>
-    </div>
+  }
+
 
 </div>

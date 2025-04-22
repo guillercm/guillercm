@@ -33,34 +33,42 @@
   }
 
 
-  @keyframes reveal {
+  @keyframes revealLeft {
     from {
       opacity: 0;
       translate: -100px 0;
     }
-
     to {
       opacity: 1;
       translate: 0 0;
     }
   }
 
+  @keyframes revealRight {
+    from {
+      opacity: 0;
+      translate: 100px 0;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+
+  .revealLeft {
+    animation-name: revealLeft;
+  }
+
+  .revealRight {
+    animation-name: revealRight;
+  }
 
   .project-container {
     transition: 0.5s;
-    animation: reveal linear both;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
     animation-timeline: view();
     animation-range: entry 50% cover 45%;
   }
 
-  .btn-video {
-    background: rgba(110, 105, 207, 0.3);
-  }
 
-  .btn-preview {
-    background: rgba(13, 178, 187, 0.3);
-  }
-
-  .btn-github {
-    background: rgba(0,0,0,0.3);
-  }

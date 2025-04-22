@@ -4,8 +4,12 @@ import { Component, input } from '@angular/core';
   selector: 'core-layout-section',
   imports: [],
   templateUrl: './layout-section.component.html',
-  styleUrl: './layout-section.component.css'
+  styleUrl: './layout-section.component.css',
+  host: {
+    '[id]': 'sectionId()'
+  }
 })
 export class LayoutSectionComponent {
-  public title = input.required<string>();
+  public sectionId = input.required<string>();
+  public sectionTitle = input.required<string>();
 }

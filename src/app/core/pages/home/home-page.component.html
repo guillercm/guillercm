@@ -1,13 +1,13 @@
 
 @if (config()) {
   <core-home-section [personalData]="config()!.personalData"></core-home-section>
-  <core-layout-section title="Sobre mí">
+  <core-layout-section sectionTitle="Sobre mí" sectionId="sobre-mi">
     <core-about-me-section [description]="config()!.portfolio.description"></core-about-me-section>
   </core-layout-section>
-  <core-layout-section title="Proyectos">
-    <core-projects-section></core-projects-section>
+  <core-layout-section sectionTitle="Proyectos" sectionId="proyectos">
+    <core-projects-section [projects]="config()!.projects"></core-projects-section>
   </core-layout-section>
-  <core-layout-section title="Tecnologías">
+  <core-layout-section sectionTitle="Tecnologías" sectionId="tecnologias">
     <core-technologies-section></core-technologies-section>
   </core-layout-section>
 }

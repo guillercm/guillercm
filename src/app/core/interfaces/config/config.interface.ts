@@ -8,7 +8,6 @@ export interface Config {
     description: string;
   };
   training: Training[];
-  technologies: Technologies;
   projects: Project[];
   certificates: Certificate[];
   workExperience: WorkExperience[];
@@ -46,23 +45,25 @@ export interface Surnames {
   second: string;
 }
 
+export interface ProjectActions {
+  video?: string;
+  preview?: string;
+  gitHub?: string;
+}
+
 export interface Project {
   name: string;
   image: string;
   description: string;
-  tecnologias: string[];
+  technologies: string[];
   show: boolean;
-  gitHub: string;
+  actions: ProjectActions
 }
 
 export interface SocialNetworks {
   linkedIn: string;
   infoJobs: string;
   gitHub: string;
-}
-
-export interface Technologies {
-  all: { [key: string]: DataAllTechnology };
 }
 
 export interface DataAllTechnology {
