@@ -8,7 +8,8 @@
 
   to {
       height: 50px;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(12px);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
       --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / 18%);
       background-color: rgba(0, 0, 0, 0);
   }

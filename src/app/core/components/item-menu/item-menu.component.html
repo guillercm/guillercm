@@ -1,7 +1,12 @@
 
 @switch (type()) {
   @case ('default') {
-    <a [routerLink]="[]" [fragment]="data().sectionId" class="font-semibold text-primary">{{data().label | uppercase}}</a>
+    <a [routerLink]="[]" [fragment]="data().sectionId" [class.text-primary]="!isActive()" [class.text-secondary]="isActive()" class="font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" class="text-base font-semibold m-6 group relative w-max">
+      <span>{{data().label | uppercase}}</span>
+      <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-secondary group-hover:w-3/6"></span>
+      <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-secondary group-hover:w-3/6"></span>
+  </a>
+    <!-- <a [routerLink]="[]" [fragment]="data().sectionId" [class.text-primary]="!isActive()" [class.text-secondary]="isActive()" class="font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">{{data().label | uppercase}}</a> -->
   }@case ('movil') {
     <a [routerLink]="[]" [fragment]="data().sectionId"
     class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-primary bg-primary-hover">{{data().label}}</a>

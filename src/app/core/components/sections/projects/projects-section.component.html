@@ -18,9 +18,9 @@
         </div>
         <hr class="w-full h-[3px] mt-4 mb-4 bg-primary border-none opacity-85">
         <div class="flex gap-2 justify-center sm:justify-end">
-          <core-action-button type="video"></core-action-button>
+          <core-action-button titleButton="Ver vídeo" type="video"></core-action-button>
           <core-action-button type="preview"></core-action-button>
-          <core-action-button [url]="project.actions.gitHub"></core-action-button>
+          <core-action-button [action]="project.actions.gitHub" titleButton="Ver en gitHub"></core-action-button>
         </div>
       </div>
     </div>

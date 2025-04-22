@@ -1,5 +1,6 @@
 
 @if (config()) {
+
   <core-home-section [personalData]="config()!.personalData"></core-home-section>
   <core-layout-section sectionTitle="Sobre mí" sectionId="sobre-mi">
     <core-about-me-section [description]="config()!.portfolio.description"></core-about-me-section>
@@ -13,6 +14,9 @@
 }
 
 <!--
+  https://pagedone.io/docs/hover-effect
+  https://pagedone.io/docs/buttons
+
   https://tailwindcss.com/docs/dark-mode
   https://tailwindcss.com/plus/ui-blocks/marketing/elements/headers
   https://leomoreno.vercel.app/#inicio

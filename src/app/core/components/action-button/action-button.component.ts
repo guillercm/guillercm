@@ -11,6 +11,8 @@ export class ActionButtonComponent {
 
   public type = input<'video' | 'preview' | 'github'>('github')
 
-  public url = input<string | undefined>("");
+  public action = input<string | undefined>("");
+
+  public titleButton = input<string>("");
 
 }

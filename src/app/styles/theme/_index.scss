@@ -10,6 +10,10 @@
   @apply bg-indigo-900;
 }
 
+.bg-secondary {
+  @apply bg-amber-500;
+}
+
 .bg-primary-hover:hover {
   background-color: #3f3f54;
 }

@@ -1,7 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, input } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, computed, effect, inject, input } from '@angular/core';
+import { rxResource } from '@angular/core/rxjs-interop';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ItemMenu } from '@core/interfaces/menu/item-menu.interface';
+import { FragmentUrlService } from '@core/services/fragmentUrl/fragment-url.service';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'core-item-menu',
@@ -14,8 +17,12 @@ import { ItemMenu } from '@core/interfaces/menu/item-menu.interface';
 })
 export class ItemMenuComponent {
 
+  private readonly _fragmentUrlService = inject(FragmentUrlService);
+
   public data = input.required<ItemMenu>();
 
   public type = input<'default' | 'movil'>('default');
 
+  public readonly isActive = computed(() => this._fragmentUrlService.fragment() === this.data().sectionId )
 }
+
