@@ -37,6 +37,10 @@ export class SidemenuComponent {
     {
       label: 'Proyectos',
       sectionId: 'proyectos'
+    },
+    {
+      label: 'Tecnologías',
+      sectionId: 'tecnologias'
     }
   ]
 

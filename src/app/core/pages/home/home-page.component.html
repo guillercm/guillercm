@@ -1,14 +1,15 @@
 
 @if (config()) {
-  @let classes = "mx-auto max-w-screen-lg mt-10 px-8 py-12";
   <core-home-section [personalData]="config()!.personalData"></core-home-section>
-  <div [ngClass]="classes">
+  <core-layout-section title="Sobre mí">
     <core-about-me-section [description]="config()!.portfolio.description"></core-about-me-section>
-  </div>
-  <div [ngClass]="classes">
+  </core-layout-section>
+  <core-layout-section title="Proyectos">
     <core-projects-section></core-projects-section>
-  </div>
-
+  </core-layout-section>
+  <core-layout-section title="Tecnologías">
+    <core-technologies-section></core-technologies-section>
+  </core-layout-section>
 }
 
 <!--
