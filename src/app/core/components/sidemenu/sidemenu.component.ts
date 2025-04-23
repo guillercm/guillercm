@@ -61,6 +61,10 @@ export class SidemenuComponent {
     {
       label: 'Tecnologías',
       sectionId: 'tecnologias'
+    },
+    {
+      label: 'Certificados',
+      sectionId: 'certificados'
     }
   ]
 

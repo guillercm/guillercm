@@ -23,6 +23,22 @@
   "portfolio": {
     "description": "¡Hola! Me llamo Guillermo Ruiz-Cortina Martínez, y soy un apasionado de la programación. Disfruto trabajando con diferentes tecnologías, desde lenguajes de programación puros como JavaScript hasta el uso de frameworks y librerías populares como Angular y React. Mi dedicación y pasión por la programación me han llevado a aprender constantemente desarrollando mis propios proyectos. Cuando me enfrento a desafíos o problemas, me sumerjo en ellos hasta encontrar la solución que busco."
   },
+  "skills": [
+    {
+      "name": "Frontend",
+      "description": "De locoos...",
+      "technologies": [
+        "HTML", "CSS"
+      ]
+    },
+    {
+      "name": "Backend",
+      "description": "guau...",
+      "technologies": [
+        "HTML", "CSS"
+      ]
+    }
+  ],
   "training": [
     {
       "name": "Desarrollo de aplicaciones web",
@@ -49,9 +65,9 @@
       "image": "royalmon.png",
       "description": "Un juego que combina el mundo de pokemon con el del clash royale. ¡Captura todos los royalmons y consigue todas las medallas de gimnasio!",
       "technologies": [
-        "angular",
-        "spring boot",
-        "mysql"
+        "Angular",
+        "Spring Boot",
+        "MySQL"
       ],
       "show": true,
       "actions": {
@@ -65,9 +81,9 @@
       "image": "plantasVsZombis.png",
       "description": "Divertido juego de estrategia que consiste en matar a todos los zombis antes de que lleguen a tu casa. Recolecta soles para comprar plantas y defenderte.",
       "technologies": [
-        "html",
-        "css",
-        "javascript"
+        "HTML",
+        "CSS",
+        "Javascript"
       ],
       "show": true,
       "actions": {
@@ -81,9 +97,9 @@
       "image": "club_nautico.png",
       "description": "Aplicación para gestionar barcos, sus respectivas salidas con un capitán determinado y con un horario.",
       "technologies": [
-        "angular",
-        "spring boot",
-        "mysql"
+        "Angular",
+        "Spring Boot",
+        "MySQL"
       ],
       "show": true,
       "actions": {
@@ -97,11 +113,11 @@
       "image": "noHeSidoYo.png",
       "description": "Un juego online divertido de preguntas de temáticas a elegir sobre hipotéticas situaciones para jugar con tus amigos.",
       "technologies": [
-        "html",
-        "css",
-        "javascript",
-        "php",
-        "mysql"
+        "HTML",
+        "CSS",
+        "Javascript",
+        "PHP",
+        "MySQL"
       ],
       "show": true,
       "actions": {

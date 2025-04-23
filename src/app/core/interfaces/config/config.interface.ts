@@ -7,10 +7,17 @@ export interface Config {
   portfolio: {
     description: string;
   };
+  skills: Skill[];
   training: Training[];
   projects: Project[];
   certificates: Certificate[];
   workExperience: WorkExperience[];
+}
+
+export interface Skill {
+  name: string;
+  description: string;
+  technologies: string[];
 }
 
 export interface Certificate {

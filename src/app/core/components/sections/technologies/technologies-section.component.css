@@ -1,0 +1,13 @@
+.tecnology-block code {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    color: #fff;
+    background-color: #1e2939;
+    border-radius: .222222em;
+    padding: .333333em .555556em;
+    font-size: .875em;
+    font-weight: 600;
+}
+.tecnology-block p {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}

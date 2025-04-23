@@ -9,7 +9,10 @@
     <core-projects-section [projects]="config()!.projects"></core-projects-section>
   </core-layout-section>
   <core-layout-section sectionTitle="Tecnologías" sectionId="tecnologias">
-    <core-technologies-section></core-technologies-section>
+    <core-technologies-section [skills]="config()!.skills"></core-technologies-section>
+  </core-layout-section>
+  <core-layout-section sectionTitle="Certificados" sectionId="certificados">
+    <core-certificates [certificates]="config()!.certificates"></core-certificates>
   </core-layout-section>
 }
 
