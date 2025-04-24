@@ -1,59 +1,59 @@
-import { Component, OnInit, input, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, computed, input, signal } from '@angular/core';
 import { Certificate } from '@core/interfaces/config/config.interface';
 
 @Component({
   selector: 'core-certificates',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './certificates.component.html',
   styleUrl: './certificates.component.css'
 })
-export class CertificatesComponent implements OnInit {
+export class CertificatesComponent {
 
   public certificates = input.required<Certificate[]>(); 
 
-  private _activeCertificate = signal<Certificate | null>(null);
+  private _activeIndexCertificate = signal<number>(0);
 
-  
-  // protected readonly activeCertificate = this._activeCertificate.asReadonly();
-
-  ngOnInit(): void {
-    this.initialize();
-  }
-
-  private initialize() {
-    const certificates = this.certificates();
-    if (certificates.length) {
-      this._activeCertificate.set(certificates[0]);
-    }
-  }
+  private _activeCertificate = computed<Certificate>(() => 
+    this.certificates()[this._activeIndexCertificate()]
+  )
 
   protected certificateIsActive(certificate: Certificate) {
     return this._activeCertificate() === certificate;
   }
 
-  protected setActiveCertificate(certificate: Certificate) {
-    this._activeCertificate.set(certificate);
-  }
-
-  private getActiveIndexCertificate() {
-    const certificates = this.certificates();
-    const activeCertificate = this._activeCertificate();
-    return {
-      certificatesLength: certificates.length,
-      index: activeCertificate ? certificates.indexOf(activeCertificate) : -1
-    } ;
+  protected setActiveCertificate(index: number) {
+    this._activeIndexCertificate.set(index);
   }
 
   protected nextActiveCertificate() {
-    const {index, certificatesLength } = this.getActiveIndexCertificate();
-    this._activeCertificate.set(this.certificates()[index === (certificatesLength -1) ? 0 : index + 1])
+    this._activeIndexCertificate.update(() => {
+      return this.getIndexNextCertificate();
+    })
   }
 
   protected prevActiveCertificate() {
-    const { index, certificatesLength } = this.getActiveIndexCertificate();
-    this._activeCertificate.set(
-      this.certificates()[index === 0 ? certificatesLength - 1 : index - 1]
-    );
+    this._activeIndexCertificate.update(() => {
+      return this.getIndexPrevCertificate();;
+    })
+  }
+
+  protected getIndexNextCertificate() {
+    if (this.certificates().length - 1 === this._activeIndexCertificate()) return 0;
+    return this._activeIndexCertificate() + 1;
+  }
+
+  protected getIndexPrevCertificate() {
+    if (this._activeIndexCertificate() === 0) return this.certificates().length - 1;
+    return this._activeIndexCertificate() - 1;
+  }
+
+  protected classesByCertificateIndex(index: number) {
+    const activeIndexCertificate = this._activeIndexCertificate();
+    if (index === activeIndexCertificate) return 'transform z-30 translate-x-0';
+    if (index === this.getIndexPrevCertificate()) return '-translate-x-full';
+    if (index === this.getIndexNextCertificate()) return 'translate-x-full';
+    return ' translate-x-0 z-30 hidden';
   }
   
 

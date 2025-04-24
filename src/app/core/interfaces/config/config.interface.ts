@@ -1,6 +1,5 @@
 export interface Config {
   personalData: PersonalData;
-  socialNetworks: SocialNetworks;
   resume: {
     description: string;
   };
@@ -45,6 +44,7 @@ export interface PersonalData {
   location: string;
   position: string;
   portfolio: string;
+  socialNetworks: SocialNetworks;
 }
 
 export interface Surnames {

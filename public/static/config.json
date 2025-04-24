@@ -10,12 +10,12 @@
     "email": "guillermo.ruiz.cortina.martinez@gmail.com",
     "location": "Madrid - España",
     "position": "Desarrollador Software",
-    "portfolio": "https://guillercm.github.io/guillercm/"
-  },
-  "socialNetworks": {
-    "linkedIn": "https://linkedin.com/in/guillermo-ruíz-cortina-martínez-032b75295",
-    "infoJobs": "",
-    "gitHub": "https://github.com/guillercm/"
+    "portfolio": "https://guillercm.github.io/guillercm/",
+    "socialNetworks": {
+      "linkedIn": "https://linkedin.com/in/guillermo-ruíz-cortina-martínez-032b75295",
+      "infoJobs": "",
+      "gitHub": "https://github.com/guillercm/"
+    }
   },
   "resume": {
     "description": "Mi pasión por la programación se refleja en mis proyectos personales, los cuales están disponibles en mi portfolio y han sido fundamentales para mi crecimiento y mejora como programador."
@@ -28,7 +28,21 @@
       "name": "Frontend",
       "description": "De locoos...",
       "technologies": [
+        "HTML", "CSS","HTML", "CSS","HTML", "CSS", "HTML", "CSS","HTML", "CSS","HTML", "CSS", "HTML", "CSS","HTML", "CSS","HTML", "CSS"
+      ]
+    },
+    {
+      "name": "Backend",
+      "description": "guau...",
+      "technologies": [
         "HTML", "CSS"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "description": "De locoos...",
+      "technologies": [
+        "HTML", "CSS","HTML", "CSS","HTML", "CSS"
       ]
     },
     {

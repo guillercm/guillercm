@@ -20,30 +20,25 @@
 
 <div class="grid grid-cols md:grid-cols-2 gap-5 mt-6 ">
     @for (skill of skills(); track $index) {
-        <div class="sm:pb-4 divide-y divide-gray-200 dark:divide-gray-700">
-            <div class="flex flex-col items-center space-y-4">
-                <!-- Contenedor de imágenes -->
-                <div class="flex space-x-4">
-                    @for (tecnology of skill.technologies; track $index) {
-                        <div class="flex flex-col items-center border border-gray-300 dark:border-gray-600 rounded-md p-2 w-20">
-                            <img [src]="tecnology | imgTecnology" [alt]="tecnology" class="sm:w-12 sm:h-12 w-9 h-9">
-                            <p class="mt-1 text-sm text-center text-gray-700 dark:text-gray-300 truncate">
-                              {{tecnology}}
-                            </p>
-                          </div>
-                    }
-                </div>
-                <!-- Contenedor de texto -->
-                <div class="text-center pb-4">
-                    <p class="text-sm font-medium text-gray-900 dark:text-white">
-                        {{skill.name}}
-                    </p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">
-                        {{skill.description}}
-                    </p>
-                </div>
+    <div class="sm:pb-4 border-b-3 border-blue-900 mb-6" >
+        <div class="flex flex-wrap gap-4 p-2 mb-2 list-none justify-center">
+            @for (tecnology of skill.technologies; track $index) {
+            <div class="flex flex-col items-center border border-gray-300 dark:border-gray-600 rounded-md p-2 w-20">
+                <img [src]="tecnology | imgTecnology" [alt]="tecnology" class="sm:w-12 sm:h-12 w-9 h-9">
+                <p class="mt-1 text-sm text-center text-gray-700 dark:text-gray-300 truncate">
+                    {{tecnology}}
+                </p>
             </div>
-            <hr>
+            }
         </div>
+        <div class="text-center">
+            <p class="text-sm font-medium text-gray-900 dark:text-white">
+                {{skill.name}}
+            </p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+                {{skill.description}}
+            </p>
+        </div>
+    </div>
     }
 </div>

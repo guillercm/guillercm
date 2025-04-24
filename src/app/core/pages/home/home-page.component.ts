@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
+import { FooterComponent } from '@core/components/footer/footer.component';
 import { AboutMeSectionComponent } from '@core/components/sections/about-me/about-me-section.component';
 import { CertificatesComponent } from '@core/components/sections/certificates/certificates.component';
 import { HomeSectionComponent } from '@core/components/sections/home/home-section.component';
@@ -11,7 +12,7 @@ import { AppConfigService } from '@core/services/config/app-config.service';
 
 @Component({
   selector: 'core-home-page',
-  imports: [CommonModule, LayoutSectionComponent, HomeSectionComponent, AboutMeSectionComponent, ProjectsSectionComponent, TechnologiesSectionComponent, CertificatesComponent],
+  imports: [CommonModule, LayoutSectionComponent, HomeSectionComponent, AboutMeSectionComponent, ProjectsSectionComponent, TechnologiesSectionComponent, CertificatesComponent, FooterComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css',
   host: {

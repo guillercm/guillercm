@@ -1,6 +1,5 @@
 
 @if (config()) {
-
   <core-home-section [personalData]="config()!.personalData"></core-home-section>
   <core-layout-section sectionTitle="Sobre mí" sectionId="sobre-mi">
     <core-about-me-section [description]="config()!.portfolio.description"></core-about-me-section>
@@ -14,6 +13,7 @@
   <core-layout-section sectionTitle="Certificados" sectionId="certificados">
     <core-certificates [certificates]="config()!.certificates"></core-certificates>
   </core-layout-section>
+  <core-footer [personalData]="config()!.personalData"></core-footer>
 }
 
 <!--
