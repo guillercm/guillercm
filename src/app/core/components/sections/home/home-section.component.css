@@ -13,3 +13,17 @@
     rgba(254, 254, 254, 1) 100%
   );
 }
+
+.fish {
+  width: 150px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  transform-origin: center;
+  font-size: 40px;
+  left: calc(50% - 100px);
+  top: calc(50% - 50px);
+  /* animation: nadar 5s linear infinite; */
+  /*transition: transform 0.2s;  AÃ±ade una transiciÃ³n suave */
+}

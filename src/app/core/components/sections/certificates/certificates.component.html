@@ -1,42 +1,49 @@
-
-
-<div id="default-carousel" class="bg-white relative w-full border dark:border-gray-600 rounded-md pt-3 pb-3" data-carousel="slide">
-    <!-- Carousel wrapper -->
+<div id="default-carousel" class="bg-white relative w-full border dark:border-gray-600 rounded-md pt-3 pb-3"
+    data-carousel="slide">
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-         <!-- Item 1 -->
-         @for (certificate of certificates(); let index = $index;track $index) {
-            <div [ngClass]="classesByCertificateIndex(index)" class=" duration-700 ease-in-out absolute inset-0 transition-transform transform z-30" data-carousel-item>
-                <img [src]="'static/img/certificates/' + certificate.image" [alt]="certificate" [alt]="certificate" class="object-contain h-full w-auto absolute block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+        @for (certificate of certificates(); let index = $index; track $index) {
+            <div [ngClass]="classesByCertificateIndex(index)"
+                class=" duration-700 ease-in-out absolute inset-0 transition-transform transform" data-carousel-item>
+                <img [src]="'static/img/certificates/' + certificate.image" [alt]="certificate" [alt]="certificate"
+                    class="object-contain h-full w-auto absolute block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
             </div>
-         }
-        
-        
+        }
     </div>
-    <!-- Slider indicators -->
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-
+    <div class="absolute flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
         @for (certificate of certificates(); let index = $index; track $index) {
             @if (certificateIsActive(certificate)) {
-                <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800 hover:bg-white dark:hover:bg-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800 hover:bg-white dark:hover:bg-gray-800"
+                    aria-current="true" aria-label="Slide 1"></button>
             } @else {
-                <button type="button" (click)="setActiveCertificate(index)" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" (click)="setActiveCertificate(index)"
+                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                    aria-current="false" aria-label="Slide 1"></button>
             }
-            
-         }
-        </div>
-    <!-- Slider controls -->
-    <button type="button" (click)="prevActiveCertificate()" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none" data-carousel-prev>
-        <span class="cursor-pointer inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 hover:bg-white/50 dark:hover:bg-gray-800/60 focus:ring-4 focus:ring-white dark:group-focus:ring-gray-800/70 focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+        }
+    </div>
+    <button type="button" (click)="prevActiveCertificate()"
+        class="absolute top-0 start-0 flex items-center justify-center h-full px-4 group focus:outline-none"
+        data-carousel-prev>
+        <span
+            class="cursor-pointer inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 hover:bg-white/50 dark:hover:bg-gray-800/60 focus:ring-4 focus:ring-white dark:group-focus:ring-gray-800/70 focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 1 1 5l4 4" />
             </svg>
             <span class="sr-only">Previous</span>
         </span>
     </button>
-    <button (click)="nextActiveCertificate()" type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 group focus:outline-none" data-carousel-next>
-        <span class="cursor-pointer inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 hover:bg-white/50 dark:hover:bg-gray-800/60 focus:ring-4 focus:ring-white dark:group-focus:ring-gray-800/70 focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+    <button (click)="nextActiveCertificate()" type="button"
+        class="absolute top-0 end-0 flex items-center justify-center h-full px-4 group focus:outline-none"
+        data-carousel-next>
+        <span
+            class="cursor-pointer inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 hover:bg-white/50 dark:hover:bg-gray-800/60 focus:ring-4 focus:ring-white dark:group-focus:ring-gray-800/70 focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 9 4-4-4-4" />
             </svg>
             <span class="sr-only">Next</span>
         </span>

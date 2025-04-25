@@ -50,10 +50,10 @@ export class CertificatesComponent {
 
   protected classesByCertificateIndex(index: number) {
     const activeIndexCertificate = this._activeIndexCertificate();
-    if (index === activeIndexCertificate) return 'transform z-30 translate-x-0';
+    if (index === activeIndexCertificate) return 'transform translate-x-0';
     if (index === this.getIndexPrevCertificate()) return '-translate-x-full';
     if (index === this.getIndexNextCertificate()) return 'translate-x-full';
-    return ' translate-x-0 z-30 hidden';
+    return ' translate-x-0 hidden';
   }
   
 
