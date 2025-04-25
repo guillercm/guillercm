@@ -1,6 +1,6 @@
 <div #waterContainer class="h-svh bg-water position-relative">
   @for (fish of fish(); track $index) {
-    <div class="fish" [ngStyle]="getStylesFish(fish)"></div>
+    <div #divFish class="fish" [ngStyle]="getStylesFish(fish)"></div>
   }
   <div class=" text-center mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 py-32">
     <h2 class="[text-shadow:_0_2px_4px_rgb(99_102_241_/_0.8)] inline-block transform hover:-translate-y-1 hover:scale-110 transition duration-500 ease-in-out text-center text-xl font-semibold text-secondary italic">{{personalData().position}}</h2>
