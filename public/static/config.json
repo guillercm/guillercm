@@ -75,6 +75,20 @@
   ],
   "projects": [
     {
+      "name": "Componente de formulario",
+      "image": "royalmon.png",
+      "description": "Un componente para la creación de formularios dinámicos",
+      "technologies": [
+        "Angular",
+        "Typescript",
+        "Bootstrap"
+      ],
+      "show": true,
+      "actions": {
+        "npm": "https://www.npmjs.com/package/grcm-components"
+      }
+    },
+    {
       "name": "Royalmon",
       "image": "royalmon.png",
       "description": "Un juego que combina el mundo de pokemon con el del clash royale. ¡Captura todos los royalmons y consigue todas las medallas de gimnasio!",
@@ -167,13 +181,15 @@
       "name": "Javascript intermedio",
       "description": "Certificado oficial de OpenWebinars",
       "image": "javascript.png",
-      "pdf": "javascriptIntermedio.pdf"
+      "pdf": "javascriptIntermedio.pdf",
+      "show": false
     },
     {
       "name": "Unity",
       "description": "Certificado oficial de Certiport",
       "image": "unity.png",
-      "pdf": "unity.pdf"
+      "pdf": "unity.pdf",
+      "show": false
     }
   ],
   "workExperience": [

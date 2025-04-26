@@ -1,7 +1,7 @@
 
 @switch (type()) {
   @case ('default') {
-    <a [routerLink]="[]" [fragment]="data().sectionId" [class.text-primary]="!isActive()" [class.text-secondary]="isActive()" class="font-semibold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" class="text-base font-semibold m-6 group relative w-max">
+    <a [routerLink]="[]" [fragment]="data().sectionId" [class.text-primary]="!isActive()" [class.text-secondary]="isActive()" class="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] m-6 group w-max">
       <span>{{data().label | uppercase}}</span>
       <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-secondary group-hover:w-3/6"></span>
       <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-secondary group-hover:w-3/6"></span>

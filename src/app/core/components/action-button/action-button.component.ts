@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
 })
 export class ActionButtonComponent {
 
-  public type = input<'video' | 'preview' | 'github'>('github')
+  public type = input<'video' | 'preview' | 'npm' | 'github'>('github')
 
   public action = input<string | undefined>("");
 

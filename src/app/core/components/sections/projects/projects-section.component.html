@@ -11,7 +11,7 @@
         <div class="flex flex-wrap gap-2 mb-4">
           @for (tecnology of project.technologies; track $index) {
           <div [title]="tecnology"
-            class="flex items-center bg-blue-100 text-blue-800 text-sm font-semibold rounded-full px-2 py-1">
+            class="flex items-center bg-indigo-100 text-indigo-800 text-sm font-semibold rounded-full px-2 py-1">
             <img [src]="tecnology | imgTecnology" [alt]="tecnology" class="w-4 h-4 mr-1">{{tecnology}}
           </div>
           }
@@ -19,7 +19,8 @@
         <hr class="w-full h-[3px] mt-4 mb-4 bg-primary border-none opacity-85">
         <div class="flex gap-2 justify-center sm:justify-end">
           <core-action-button titleButton="Ver vídeo" type="video"></core-action-button>
-          <core-action-button type="preview"></core-action-button>
+          <core-action-button titleButton="Ver en acción" type="preview"></core-action-button>
+          <core-action-button [action]="project.actions.npm" type="npm" titleButton="Ver en NPM"></core-action-button>
           <core-action-button [action]="project.actions.gitHub" titleButton="Ver en gitHub"></core-action-button>
         </div>
       </div>

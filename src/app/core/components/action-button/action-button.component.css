@@ -6,6 +6,10 @@
   background: rgba(13, 178, 187, 0.3);
 }
 
+.btn-npm {
+  background: #c53938;
+}
+
 .btn-github {
   background: rgba(0,0,0,0.3);
 }

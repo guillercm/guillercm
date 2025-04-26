@@ -1,0 +1,96 @@
+<div class="print:hidden flex flex-col items-center gap-4 mb-6">
+
+  <img src="static/img/curriculum/demo-print.png" class="w-200 rounded-lg shadow-lg">
+  <button type="button"
+    class="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-sm px-6 py-3 shadow-md transition duration-300">
+    Descargar README.md
+  </button>
+</div>
+
+<div class="grid grid-cols-2 overflow-hidden mb-6" style="width:21cm; height:29.7cm;">
+  <div class="bg-white p-8">
+
+    <section class="mb-4">
+      <h2 class="text-2xl font-semibold border-b-2 border-indigo-200 pb-1 mb-4">Sobre mí</h2>
+      <p>{{ config()?.resume?.description }}</p>
+    </section>
+    <section class="mb-4">
+      <h2 class="text-2xl font-semibold border-b-2 border-indigo-200 pb-1 mb-4">Contacto</h2>
+      <ul class="space-y-2">
+        <li>Email: <a [href]="'mailto:' + personalData().email" class="text-indigo-500 hover:underline">{{
+            personalData().email }}</a></li>
+        <li>Teléfono: <a href="tel:+34123456789" class="text-indigo-500 hover:underline">{{ personalData().phone }}</a>
+        </li>
+        <li>Ubicación: {{ personalData().location }}</li>
+        <li>GitHub: <a [href]="personalData().socialNetworks.gitHub" class="text-indigo-500 hover:underline">{{
+            personalData().socialNetworks.gitHub }}</a>
+        </li>
+        <li>Portfolio: <a [href]="personalData().portfolio"
+            class="text-indigo-500 hover:underline">{{personalData().portfolio}}</a></li>
+      </ul>
+    </section>
+    <section class="mb-4">
+      <h2 class="text-2xl font-semibold border-b-2 border-indigo-200 pb-1 mb-4">Tecnologías</h2>
+      <ul class="flex flex-wrap gap-2">
+        @for (skill of config()?.skills; track $index) {
+        @for (tecnology of skill.technologies; track $index) {
+        <li class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">{{tecnology}}</li>
+        }
+        }
+      </ul>
+    </section>
+    <section class="mb-4">
+      <h2 class="text-2xl font-semibold border-b-2 border-orange-300 pb-1 mb-4">Certificados</h2>
+      <div>
+        @for (certificate of config()?.certificates; let index = $index; track $index) {
+          @if (certificate.show !== false) {
+            <div>
+              <h3 class="font-semibold text-lg">{{ certificate.name }}</h3>
+              <!-- <p>{{ certificate.description }}</p> -->
+            </div>
+          }
+        }
+      </div>
+    </section>
+  </div>
+  <div class="bg-orange-100 p-8">
+    <section class="flex items-center mb-4">
+
+      <div class="flex flex-col justify-center">
+        <h1 class="text-3xl font-bold leading-tight">{{ fullName() }}</h1>
+        <p class="text-xl text-indigo-600 leading-tight">{{ personalData().position }}</p>
+      </div>
+      <div class="flex-shrink-0 w-30 h-30 rounded-full overflow-hidden bg-white border border-gray-300">
+        <img src="static/img/me-resume.png" alt="Foto de Perfil"
+          class="w-full h-full object-cover">
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="text-2xl font-semibold border-b-2 border-orange-300 pb-1 mb-4">Experiencia Laboral</h2>
+      <div class="space-y-6">
+        @for (workExperience of config()?.workExperience; let index = $index; track $index) {
+        @if (workExperience.show !== false) {
+        <div>
+          <h3 class="font-semibold text-lg">{{ workExperience.position }}<span class="text-sm text-gray-600">{{
+              workExperience.date }}</span></h3>
+          <p>{{ workExperience.description }}</p>
+        </div>
+        }
+        }
+      </div>
+    </section>
+    <section  class="mb-4">
+      <h2 class="text-2xl font-semibold border-b-2 border-orange-300 pb-1 mb-4">Formación</h2>
+      <div class="space-y-6">
+        @for (train of config()?.training; let index = $index; track $index) {
+        <div>
+          <h3 class="font-semibold text-lg">{{ train.name }}</h3>
+          <p class="text-sm text-gray-600">{{ train.institute }} <span class="mx-2">|</span> {{ train.date }}</p>
+        </div>
+        }
+      </div>
+    </section>
+
+  </div>
+</div>

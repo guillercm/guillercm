@@ -17,20 +17,37 @@
 }
 @case ('preview') {
 @if (action()) {
-  <a [href]="action()" target="_blank">
-    <button type="button" [attr.title]="titleButton() ? titleButton() : null" [routerLink]="action()"
-  class="btn-preview hover:opacity-60 hover:scale-105 hover:-translate-z-1 transition duration-500 ease-in-out cursor-pointer text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mb-2">
-  <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24" fill="none"
-    xmlns="http://www.w3.org/2000/svg">
-    <path stroke="white"
-      d="M2.45448 13.8008C1.84656 12.6796 1.84656 11.3204 2.45447 10.1992C4.29523 6.80404 7.87965 4.5 11.9999 4.5C16.1202 4.5 19.7046 6.80404 21.5454 10.1992C22.1533 11.3204 22.1533 12.6796 21.5454 13.8008C19.7046 17.196 16.1202 19.5 11.9999 19.5C7.87965 19.5 4.29523 17.196 2.45448 13.8008Z">
-    </path>
-    <path stroke="white"
-      d="M15.0126 11.9551C15.0126 13.6119 13.6695 14.9551 12.0126 14.9551C10.3558 14.9551 9.01263 13.6119 9.01263 11.9551C9.01263 10.2982 10.3558 8.95508 12.0126 8.95508C13.6695 8.95508 15.0126 10.2982 15.0126 11.9551Z">
-    </path>
-  </svg>
-</button>
-  </a>
+<a [href]="action()" target="_blank">
+  <button type="button" [attr.title]="titleButton() ? titleButton() : null" [routerLink]="action()"
+    class="btn-preview hover:opacity-60 hover:scale-105 hover:-translate-z-1 transition duration-500 ease-in-out cursor-pointer text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mb-2">
+    <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path stroke="white"
+        d="M2.45448 13.8008C1.84656 12.6796 1.84656 11.3204 2.45447 10.1992C4.29523 6.80404 7.87965 4.5 11.9999 4.5C16.1202 4.5 19.7046 6.80404 21.5454 10.1992C22.1533 11.3204 22.1533 12.6796 21.5454 13.8008C19.7046 17.196 16.1202 19.5 11.9999 19.5C7.87965 19.5 4.29523 17.196 2.45448 13.8008Z">
+      </path>
+      <path stroke="white"
+        d="M15.0126 11.9551C15.0126 13.6119 13.6695 14.9551 12.0126 14.9551C10.3558 14.9551 9.01263 13.6119 9.01263 11.9551C9.01263 10.2982 10.3558 8.95508 12.0126 8.95508C13.6695 8.95508 15.0126 10.2982 15.0126 11.9551Z">
+      </path>
+    </svg>
+  </button>
+</a>
+}
+}
+@case ('npm') {
+@if (action()) {
+<a [href]="action()" target="_blank">
+  <button type="button" [attr.title]="titleButton() ? titleButton() : null" [routerLink]="action()"
+    class="btn-npm hover:opacity-60 hover:scale-105 hover:-translate-z-1 transition duration-500 ease-in-out cursor-pointer text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mb-2">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" class="scale-[1.8] w-4 h-4 sm:w-6 sm:h-6"
+      viewBox="0 0 500.000000 300.000000" preserveAspectRatio="xMidYMid meet">
+      <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+        <path
+          d="M110 1638 l0 -798 665 0 665 0 0 -130 0 -130 530 0 529 0 3 128 3 127 1199 5 1200 5 0 788 c1 516 -2 791 -9 795 -5 4 -1084 7 -2397 8 l-2388 0 0 -798z m1332 530 c3 -7 4 -249 4 -538 l-1 -525 -137 -3 -138 -3 0 401 0 400 -130 0 -130 0 0 -400 0 -400 -270 0 -270 0 0 540 0 540 534 0 c418 0 535 -3 538 -12z m1333 -528 l0 -535 -262 -3 -263 -2 0 -123 c0 -67 -4 -128 -8 -135 -7 -9 -68 -12 -273 -10 l-264 3 -3 660 c-1 363 0 666 3 673 3 10 116 12 537 10 l533 -3 0 -535z m1870 0 l0 -535 -137 -3 -138 -3 0 401 0 400 -130 0 -130 0 0 -400 0 -400 -135 0 -135 0 0 400 0 400 -130 0 -130 0 0 -400 0 -400 -270 0 -270 0 0 540 0 540 803 -2 802 -3 0 -535z" />
+        <path d="M2250 1640 l0 -260 125 0 125 0 0 260 0 260 -125 0 -125 0 0 -260z" />
+      </g>
+    </svg>
+  </button>
+</a>
 }
 }
 @case ('github') {

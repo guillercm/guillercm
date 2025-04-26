@@ -2,4 +2,8 @@
 @use "theme";
 @use "section-home";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));

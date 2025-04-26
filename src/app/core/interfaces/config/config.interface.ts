@@ -25,6 +25,7 @@ export interface Certificate {
   description: string;
   image: string;
   pdf: string;
+  show?: boolean;
 }
 
 export interface WorkExperience {
@@ -55,6 +56,7 @@ export interface Surnames {
 export interface ProjectActions {
   video?: string;
   preview?: string;
+  npm?: string;
   gitHub?: string;
 }
 

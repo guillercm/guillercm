@@ -26,7 +26,7 @@
             width: var(--ancho-folio);
             height: var(--alto-folio);
             background-color: white;
-            
+
         }
         .columna {
             /* padding: 10px; */
@@ -166,8 +166,8 @@
               </div>
             </div>
     </div>
-    
-    
+
+
 
     <script src="scripts/data.js"></script>
     <script>
@@ -194,9 +194,9 @@
     });
 
     </script>
-    
+
     <script>
-        nombre.innerHTML = 
+        nombre.innerHTML =
         `<h2>${dataJson.datosPersonales.nombre}<br>${dataJson.datosPersonales.primerApellido}<br>${dataJson.datosPersonales.segundoApellido}</h2>`
         ;
         profesion.textContent = dataJson.datosPersonales.puesto;
@@ -243,7 +243,7 @@
         for (let descripcion of dataJson.descripcionCurriculum) {
             sobreMi.innerHTML += `<p>${descripcion}</p>`;
         }
-        
+
         let getContacto = (imagen, texto, rounded = false) => {
             return `
             <div class="row mt-1">
@@ -297,7 +297,7 @@
 
 
 
-        
+
 
     </script>
 </body>
