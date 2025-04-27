@@ -90,6 +90,23 @@
       }
     },
     {
+      "name": "Angular",
+      "date": "2024 - 2025",
+      "image": "royalmon.png",
+      "description": "Una aplicación que reune apuntes míos, pdfs, mini aplicaciones y el contenido de 2 cursos de angular que hice recientemente.",
+      "technologies": [
+        "Angular",
+        "Typescript",
+        "Tailwind",
+        "Bootstrap"
+      ],
+      "show": true,
+      "actions": {
+        "preview": "https://guillercm.github.io/angular/",
+        "gitHub": "https://github.com/guillercm/angular"
+      }
+    },
+    {
       "name": "Club náutico",
       "date": "2023",
       "image": "club_nautico.png",
@@ -101,7 +118,6 @@
       ],
       "show": true,
       "actions": {
-        "preview": "",
         "gitHub": "https://github.com/guillercm/club_nautico"
       }
     },
