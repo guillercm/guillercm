@@ -194,37 +194,41 @@
   ],
   "workExperience": [
     {
-      "position": "Desarrollador",
-      "company": "Eviden",
+      "company": "Atos",
       "date": "Octubre 2023 - Actualidad",
-      "description": [
-        "Desarrollo con Angular, para la creación de componentes reutilizables, necesarios en distintas aplicaciones del Ministerio de Defensa con sus respectivos módulos para mostrar sus funcionalidades usando la herramienta del Storybook."
+      "projects": [
+        {
+          "name": "Salut",
+          "position": "Desarrollador",
+          "date": "Abril 2025 - Actualidad",
+          "description": "Desarrollo con React."
+        },
+        {
+          "name": "MINISTERIO DE DEFENSA",
+          "position": "Desarrollador",
+          "date": "Octubre 2023 - Abril 2025",
+          "description": "Desarrollo con Angular, para la creación de componentes reutilizables, necesarios en distintas aplicaciones del Ministerio de Defensa con sus respectivos módulos para mostrar sus funcionalidades usando la herramienta del Storybook."
+        }
       ]
     },
     {
       "position": "Desarrollador (prácticas de empresa)",
       "company": "Atos",
       "date": "Marzo 2023 - Junio 2023",
-      "description": [
-        "Mejoré mis habilidades en Angular y Java (Spring Boot)."
-      ],
+      "description": "Mejoré mis habilidades en Angular y Java (Spring Boot).",
       "show": false
     },
     {
       "position": "Desarrollador",
       "company": "Accuro Technology S.L.",
       "date": "Junio 2022 - Marzo 2023",
-      "description": [
-        "Desarrollo y actualización de una aplicación en C# y MySQL para la automatización de tareas laboriosas y repetitivas en PDF y Excel según los criterios hablados directamente con el cliente."
-      ]
+      "description": "Desarrollo y actualización de una aplicación en C# y MySQL para la automatización de tareas laboriosas y repetitivas en PDF y Excel según los criterios hablados directamente con el cliente."
     },
     {
       "position": "Desarrollador (prácticas de empresa)",
       "company": "Accuro Technology S.L.",
       "date": "Marzo 2022 - Junio 2022",
-      "description": [
-        "Actualicé una aplicación de C# y MySQL existente para cubrir los nuevos requisitos, con una comunicación directa con los clientes."
-      ],
+      "description": "Actualicé una aplicación de C# y MySQL existente para cubrir los nuevos requisitos, con una comunicación directa con los clientes.",
       "show": false
     }
   ]

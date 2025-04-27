@@ -28,11 +28,19 @@ export interface Certificate {
   show?: boolean;
 }
 
+export interface WorkProject {
+  name: string;
+  position: string;
+  date: string;
+  description: string;
+}
+
 export interface WorkExperience {
   position: string;
   company: string;
   date: string;
-  description: string[];
+  description?: string;
+  projects?: WorkProject[];
   show?: boolean;
 }
 

@@ -11,11 +11,11 @@
   <div class="bg-white p-8">
 
     <section class="mb-4">
-      <h2 class="text-2xl font-semibold border-b-2 border-indigo-200 pb-1 mb-4">Sobre mí</h2>
+      <h2 class="text-2xl font-semibold border-b-2 border-indigo-200 mb-4">Sobre mí</h2>
       <p>{{ config()?.resume?.description }}</p>
     </section>
     <section class="mb-4">
-      <h2 class="text-2xl font-semibold border-b-2 border-indigo-200 pb-1 mb-4">Contacto</h2>
+      <h2 class="text-2xl font-semibold border-b-2 border-indigo-200 mb-4">Contacto</h2>
       <ul class="space-y-2">
         <li>Email: <a [href]="'mailto:' + personalData().email" class="text-indigo-500 hover:underline">{{
             personalData().email }}</a></li>
@@ -30,7 +30,7 @@
       </ul>
     </section>
     <section class="mb-4">
-      <h2 class="text-2xl font-semibold border-b-2 border-indigo-200 pb-1 mb-4">Tecnologías</h2>
+      <h2 class="text-2xl font-semibold border-b-2 border-indigo-200 mb-4">Tecnologías</h2>
       <ul class="flex flex-wrap gap-2">
         @for (skill of config()?.skills; track $index) {
         @for (tecnology of skill.technologies; track $index) {
@@ -40,13 +40,14 @@
       </ul>
     </section>
     <section class="mb-4">
-      <h2 class="text-2xl font-semibold border-b-2 border-orange-300 pb-1 mb-4">Certificados</h2>
+      <h2 class="text-2xl font-semibold border-b-2 border-orange-300 mb-2">Certificados</h2>
       <div>
         @for (certificate of config()?.certificates; let index = $index; track $index) {
           @if (certificate.show !== false) {
-            <div>
-              <h3 class="font-semibold text-lg">{{ certificate.name }}</h3>
-              <!-- <p>{{ certificate.description }}</p> -->
+            <div class="mt-2">
+              <h3 class="font-semibold text-md">{{ certificate.name }}</h3>
+              <p class="text-sm text-gray-600 ml-3">{{ certificate.date }}</p>
+              <p class="text-sm ml-3">{{ certificate.description }}</p>
             </div>
           }
         }
@@ -67,25 +68,43 @@
     </section>
 
     <section class="mb-4">
-      <h2 class="text-2xl font-semibold border-b-2 border-orange-300 pb-1 mb-4">Experiencia Laboral</h2>
-      <div class="space-y-6">
+      <h2 class="text-2xl font-semibold border-b-2 border-orange-300 mb-4">Experiencia Laboral</h2>
+      <div class="space-y-2">
         @for (workExperience of config()?.workExperience; let index = $index; track $index) {
         @if (workExperience.show !== false) {
         <div>
-          <h3 class="font-semibold text-lg">{{ workExperience.position }}<span class="text-sm text-gray-600">{{
-              workExperience.date }}</span></h3>
-          <p>{{ workExperience.description }}</p>
+          @if (workExperience.position) {
+            <h3 class="font-semibold text-lg">{{ workExperience.company }}</h3>
+            <p class="text-sm text-gray-600">{{ workExperience.position }} · {{ workExperience.date }}</p>
+            @if (workExperience.description) {
+              <p class="text-sm mt-2">{{ workExperience.description }}</p>
+            }
+          } @else {
+            <h3 class="font-semibold text-lg">{{ workExperience.company }}<span class="text-sm text-gray-600"> {{ workExperience.date }}</span></h3>
+          }
+
         </div>
+        }
+        @if (workExperience.projects?.length) {
+          <div class="space-y-3">
+            @for (project of workExperience.projects; track project) {
+              <div class="border-l-3 border-orange-300 pl-4">
+                <h4 class="text-md font-semibold">{{ project.name }}</h4>
+                <p class="text-sm text-gray-600">{{ project.position }} · {{ project.date }}</p>
+                <p class="text-sm mt-1">{{ project.description }}</p>
+              </div>
+            }
+          </div>
         }
         }
       </div>
     </section>
     <section  class="mb-4">
-      <h2 class="text-2xl font-semibold border-b-2 border-orange-300 pb-1 mb-4">Formación</h2>
-      <div class="space-y-6">
+      <h2 class="text-2xl font-semibold border-b-2 border-orange-300 mb-4">Formación</h2>
+      <div class="space-y-3">
         @for (train of config()?.training; let index = $index; track $index) {
         <div>
-          <h3 class="font-semibold text-lg">{{ train.name }}</h3>
+          <h3 class="font-semibold text-md">{{ train.name }}</h3>
           <p class="text-sm text-gray-600">{{ train.institute }} <span class="mx-2">|</span> {{ train.date }}</p>
         </div>
         }
