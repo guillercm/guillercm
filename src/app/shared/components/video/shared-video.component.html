@@ -1,10 +1,14 @@
-<div class="video">
-  <video [ngClass]="classes()" [attr.height]="height() ? height() : null" [attr.controls]="controls() ? 'controls' : null" [attr.autoplay]="autoplay() ? 'autoplay' : null" [attr.muted]="mutedFn()"
-    [attr.loop]="loop() ? 'loop' : null" [attr.poster]="poster() ? poster() : null" [attr.title]="title() ? title() : null"
-    [attr.aria-label]="title() ? title() : null" (ended)="videoEnded.emit()"
-    (play)="videoStarted.emit()"
-    (loadedmetadata)="videoReady.emit()" (contextmenu)="contextMenuEvent($event)">
-    <source [src]="source()" type="video/mp4" />
-    Browser not supported
-  </video>
-</div>
+@defer {
+  <div class="video">
+    <video [ngClass]="classes()" [attr.height]="height() ? height() : null" [attr.controls]="controls() ? 'controls' : null" [attr.autoplay]="autoplay() ? 'autoplay' : null" [attr.muted]="mutedFn()"
+      [attr.loop]="loop() ? 'loop' : null" [attr.poster]="poster() ? poster() : null" [attr.title]="title() ? title() : null"
+      [attr.aria-label]="title() ? title() : null" (ended)="videoEnded.emit()"
+      (play)="videoStarted.emit()"
+      (loadedmetadata)="videoReady.emit()" (contextmenu)="contextMenuEvent($event)">
+      <source [src]="source()" type="video/mp4" />
+      Browser not supported
+    </video>
+  </div>
+} @placeholder {
+  <div></div>
+}
