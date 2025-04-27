@@ -1,0 +1,5 @@
+<button type="button" (click)="download.click()"
+  class="mt-4 cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-lg px-6 py-3 shadow-md transition duration-300">
+  Descargar README.md
+</button>
+<a #download [href]="downloadLink()" [hidden]="true" download="README.md"></a>

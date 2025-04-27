@@ -1,6 +1,29 @@
+.print-page {
+  width: 21cm;
+  height: 29.7cm;
+}
+
 
 @media print {
+
+  /* Ajustamos el contenedor principal */
+  .print-page {
+    overflow: hidden;
+    page-break-after: auto;
+  }
+
+  * {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
   .hidden-print {
     display: none;
   }
+}
+
+
+@page {
+  size: A4;
+  margin: 0;
 }
