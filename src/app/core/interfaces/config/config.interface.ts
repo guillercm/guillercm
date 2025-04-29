@@ -71,7 +71,7 @@ export interface ProjectActions {
 export interface Project {
   name: string;
   date: string;
-  image: string;
+  image?: string;
   description: string;
   technologies: string[];
   show: boolean;

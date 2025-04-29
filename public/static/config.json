@@ -75,6 +75,22 @@
   ],
   "projects": [
     {
+      "name": "La carrera por la dona",
+      "date": "2025",
+      "description": "Un juego multijugador ",
+      "technologies": [
+        "Angular",
+        "Typescript",
+        "Bootstrap"
+      ],
+      "show": true,
+      "actions": {
+        "video": "laCarreraPorLaDona.mp4",
+        "preview": "https://guillercm.github.io/la-carrera-por-la-dona/",
+        "gitHub": "https://github.com/guillercm/la-carrera-por-la-dona"
+      }
+    },
+    {
       "name": "Componente de formulario",
       "date": "2025",
       "image": "royalmon.png",
@@ -124,7 +140,6 @@
     {
       "name": "Royalmon",
       "date": "2022",
-      "image": "royalmon.png",
       "description": "Un juego que combina el mundo de pokemon con el del clash royale. ¡Captura todos los royalmons y consigue todas las medallas de gimnasio!",
       "technologies": [
         "Angular",
@@ -152,14 +167,12 @@
       ],
       "show": true,
       "actions": {
-        "preview": "",
         "gitHub": "https://github.com/guillercm/noHeSidoYo"
       }
     },
     {
       "name": "PlantasVsZombis",
       "date": "2021",
-      "image": "plantasVsZombis.png",
       "description": "Divertido juego de estrategia que consiste en matar a todos los zombis antes de que lleguen a tu casa. Recolecta soles para comprar plantas y defenderte.",
       "technologies": [
         "HTML",
