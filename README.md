@@ -78,8 +78,7 @@
 <table><tr><table><tr><td width="50%">
                     <h3 align="center">La carrera por la dona</h3>
                     <div align="center">
-                        
-public/static/video/projects/La carrera por la dona.mp4
+                        <img src="public/static/img/projects/laCarreraPorLaDona.png" width="300" alt="La carrera por la dona" title="La carrera por la dona">
                         <p align="left">Juego de mesa multijugador inspirado en Los Simpsons, hecho con Angular, Socket.IO y json-server. Compite en un tablero lleno de desafíos estilo party game.</p>
                             <img src="public/static/img/tecnologies/angular.png" alt="Angular" width="30" height="30" style="margin-right: 10px;" />&nbsp;<img src="public/static/img/tecnologies/scss.png" alt="SCSS" width="30" height="30" style="margin-right: 10px;" />&nbsp;<img src="public/static/img/tecnologies/bootstrap.png" alt="Bootstrap" width="30" height="30" style="margin-right: 10px;" />&nbsp;<img src="public/static/img/tecnologies/ng-bootstrap.png" alt="ng-bootstrap" width="30" height="30" style="margin-right: 10px;" />&nbsp;<img src="public/static/img/tecnologies/typescript.png" alt="Typescript" width="30" height="30" style="margin-right: 10px;" />&nbsp;<img src="public/static/img/tecnologies/nodejs.png" alt="nodejs" width="30" height="30" style="margin-right: 10px;" />&nbsp;<img src="public/static/img/tecnologies/socket-io.png" alt="Socket.io" width="30" height="30" style="margin-right: 10px;" />&nbsp;<img src="public/static/img/tecnologies/json-server.png" alt="json-server" width="30" height="30" style="margin-right: 10px;" />&nbsp;<p>
                           <a href="https://github.com/guillercm/la-carrera-por-la-dona" target="_blank">
@@ -123,8 +122,7 @@ public/static/video/projects/La carrera por la dona.mp4
                 </td> </tr></table><table><tr><td width="50%">
                     <h3 align="center">Royalmon</h3>
                     <div align="center">
-                        
-public/static/video/projects/Royalmon.mp4
+                        <img src="public/static/img/projects/royalmon.png" width="300" alt="Royalmon" title="Royalmon">
                         <p align="left">Un juego que combina el mundo de pokemon con el del clash royale. ¡Captura todos los royalmons y consigue todas las medallas de gimnasio!</p>
                             <img src="public/static/img/tecnologies/angular.png" alt="Angular" width="30" height="30" style="margin-right: 10px;" />&nbsp;<img src="public/static/img/tecnologies/spring boot.png" alt="Spring Boot" width="30" height="30" style="margin-right: 10px;" />&nbsp;<img src="public/static/img/tecnologies/mysql.png" alt="MySQL" width="30" height="30" style="margin-right: 10px;" />&nbsp;<p>
                           <a href="https://github.com/guillercm/royalmon" target="_blank">
@@ -146,8 +144,7 @@ public/static/video/projects/Royalmon.mp4
                 </td> </tr></table><table><tr><td width="50%">
                     <h3 align="center">PlantasVsZombis</h3>
                     <div align="center">
-                        
-public/static/video/projects/PlantasVsZombis.mp4
+                        <img src="public/static/img/projects/plantasVsZombis.png" width="300" alt="PlantasVsZombis" title="PlantasVsZombis">
                         <p align="left">Divertido juego de estrategia que consiste en matar a todos los zombis antes de que lleguen a tu casa. Recolecta soles para comprar plantas y defenderte.</p>
                             <img src="public/static/img/tecnologies/html.png" alt="HTML" width="30" height="30" style="margin-right: 10px;" />&nbsp;<img src="public/static/img/tecnologies/css.png" alt="CSS" width="30" height="30" style="margin-right: 10px;" />&nbsp;<img src="public/static/img/tecnologies/javascript.png" alt="Javascript" width="30" height="30" style="margin-right: 10px;" />&nbsp;<p>
                           <a href="https://github.com/guillercm/plantasVsZombis" target="_blank">

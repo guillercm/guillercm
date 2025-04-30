@@ -113,13 +113,7 @@ ${(() => {
                 htmlProjects += `${(j === 1 ? '<table><tr>' : '')}<td width="50%">
                     <h3 align="center">${project.name}</h3>
                     <div align="center">
-                        ${(() => {
-                           if (project.video) {
-                              return `
-public/static/video/projects/${project.name}.mp4`
-                           }
-                          return `<img src="public/static/img/projects/${project.image}" width="300" alt="${project.name}" title="${project.name}">`
-                        })()}
+                        <img src="public/static/img/projects/${project.image}" width="300" alt="${project.name}" title="${project.name}">
                         <p align="left">${project.description}</p>
                             ${(() => {
                                 let html = '';

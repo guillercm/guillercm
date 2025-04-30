@@ -159,6 +159,7 @@
     {
       "name": "La carrera por la dona",
       "date": "2025",
+      "image": "laCarreraPorLaDona.png",
       "video": "laCarreraPorLaDona.mp4",
       "description": "Juego de mesa multijugador inspirado en Los Simpsons, hecho con Angular, Socket.IO y json-server. Compite en un tablero lleno de desafíos estilo party game.",
       "technologies": [
@@ -234,6 +235,7 @@
     {
       "name": "Royalmon",
       "date": "2022",
+      "image": "royalmon.png",
       "video": "royalmon.mp4",
       "description": "Un juego que combina el mundo de pokemon con el del clash royale. ¡Captura todos los royalmons y consigue todas las medallas de gimnasio!",
       "technologies": [
@@ -266,6 +268,7 @@
     },
     {
       "name": "PlantasVsZombis",
+      "image": "plantasVsZombis.png",
       "video": "plantasVsZombies.mp4",
       "date": "2021",
       "description": "Divertido juego de estrategia que consiste en matar a todos los zombis antes de que lleguen a tu casa. Recolecta soles para comprar plantas y defenderte.",
