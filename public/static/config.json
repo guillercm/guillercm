@@ -21,35 +21,117 @@
     "description": "Mi pasión por la programación se refleja en mis proyectos personales, los cuales están disponibles en mi portfolio y han sido fundamentales para mi crecimiento y mejora como programador."
   },
   "portfolio": {
-    "description": "¡Hola! Me llamo Guillermo Ruiz-Cortina Martínez, y soy un apasionado de la programación. Disfruto trabajando con diferentes tecnologías, desde lenguajes de programación puros como JavaScript hasta el uso de frameworks y librerías populares como Angular y React. Mi dedicación y pasión por la programación me han llevado a aprender constantemente desarrollando mis propios proyectos. Cuando me enfrento a desafíos o problemas, me sumerjo en ellos hasta encontrar la solución que busco."
+    "description": [
+      "¡Hola! Me llamo Guillermo Ruiz-Cortina Martínez, y soy un apasionado de la programación.",
+      "Incluso antes de empezar la formación profesional ya tenía claro que lo mío era programar. A lo largo del tiempo he trabajado con distintos lenguajes y frameworks, aunque últimamente dedico más tiempo a seguir aprendiendo Angular.",
+      "Mi dedicación y pasión por la programación me han llevado a aprender constantemente desarrollando mis propios proyectos. Cuando me enfrento a desafíos o problemas, me sumerjo en ellos hasta encontrar la solución que busco."
+    ]
   },
   "skills": [
     {
-      "name": "Frontend",
-      "description": "De locoos...",
+      "name": "Lenguajes base para la web",
+      "description": "Manejo los tres con mucha soltura. Desde mis inicios me entusiasmaba crear páginas de todo tipo. Actualmente uso principalmente TypeScript, ya que es el estándar tanto en Angular como en React.",
       "technologies": [
-        "HTML", "CSS","HTML", "CSS","HTML", "CSS", "HTML", "CSS","HTML", "CSS","HTML", "CSS", "HTML", "CSS","HTML", "CSS","HTML", "CSS"
+        "HTML",
+        "Javascript",
+        "Typescript"
       ]
     },
     {
-      "name": "Backend",
-      "description": "guau...",
+      "name": "Estilos y frameworks de diseño",
+      "description": "Aprendí Tailwind recientemente en un curso de Angular. Las otras tres tecnologías las vi en el instituto y las uso con frecuencia. Suelo trabajar con SCSS para personalizar variables de Bootstrap, e incluso creé una función propia para generar clases CSS personalizadas.",
       "technologies": [
-        "HTML", "CSS"
+        "CSS",
+        "SCSS",
+        "Bootstrap",
+        "Tailwind"
       ]
     },
     {
-      "name": "Frontend",
-      "description": "De locoos...",
+      "name": "Frameworks y librerías de desarrollo frontend",
+      "description": "Conocí Angular y React en el instituto, y luego profundicé en el trabajo: primero con Angular y actualmente con React. Aunque uso ambos, Angular es mi favorito y en el que más he invertido tiempo a través de proyectos personales y cursos.",
       "technologies": [
-        "HTML", "CSS","HTML", "CSS","HTML", "CSS"
+        "Angular",
+        "React"
       ]
     },
     {
-      "name": "Backend",
-      "description": "guau...",
+      "name": "Librerías UI para Angular",
+      "description": "He utilizado PrimeNG en el trabajo, mientras que Angular Material y ng-bootstrap las he usado en proyectos personales. Me siento cómodo trabajando con las tres y considero que las manejo con bastante soltura.",
+      "show": false,
       "technologies": [
-        "HTML", "CSS"
+        "ng-bootstrap",
+        "Angular Material",
+        "PrimeNG"
+      ]
+    },
+    {
+      "name": "Librerías de Angular/React",
+      "description": "Aprendí Tanstack en un curso de Angular y, más adelante, empecé a usarlo también en el trabajo con React. Mapbox lo conocí en otro curso de Angular, pero luego profundicé por mi cuenta mediante la documentación y realicé mejoras en la aplicación, la cual está disponible en mi repositorio 'Angular'. Zustand lo utilizo actualmente con React en el trabajo.",
+      "show": false,
+      "technologies": [
+        "Tanstack",
+        "Mapbox",
+        "Zustand"
+      ]
+    },
+    {
+      "name": "Frameworks y lenguajes backend",
+      "description": "Tengo conocimientos básicos de PHP y Spring Boot gracias al instituto y a prácticas de empresa. Node.js lo aprendí por mi cuenta a nivel básico. Descubrí NestJS en un curso de Angular y, aunque no lo he utilizado mucho, es el que más me atrae por su similitud estructural con Angular. En mi GitHub tengo un repositorio llamado 'nest-backend', basado en el del curso, al que le añadí mejoras como interceptores y respuestas personalizadas para facilitar el manejo de errores en el frontend para las modales de error.",
+      "show": false,
+      "technologies": [
+        "PHP",
+        "Spring Boot",
+        "nodejs",
+        "NestJS"
+      ]
+    },
+    {
+      "name": "Bases de datos relacionales y NoSQL",
+      "description": "No las utilizo en mi día a día, pero tengo conocimientos básicos de estas tecnologías. MySQL fue la primera base de datos que aprendí y es con la que más experiencia tengo.",
+      "show": false,
+      "technologies": [
+        "MySQL",
+        "Oracle",
+        "MongoDB"
+      ]
+    },
+    {
+      "name": "Simulación de APIs y tiempo real",
+      "description": "Json Server lo aprendí en uno de los cursos de Angular, y después lo use en mi proyecto 'La carrera por la dona', ya que me permitía tener una API levantada enseguida, y como este proyecto es un juego simple, no necesitaba mucha seguridad. Socket.io lo aprendí por mi cuenta mirando documentación, y también lo usé en este proyecto.",
+      "show": false,
+      "technologies": [
+        "json-server",
+        "Socket.io"
+      ]
+    },
+    {
+      "name": "Herramientas de testing",
+      "description": "He utilizado Playwright y Cypress en el trabajo para testear formularios. Jasmine lo aprendí en un curso de Angular, donde realicé pruebas sobre servicios, componentes y otras partes del framework.",
+      "technologies": [
+        "Jasmine",
+        "Playwright",
+        "Cypress"
+      ]
+    },
+    {
+      "name": "Lenguajes de programación adicionales",
+      "description": "Aunque hace tiempo que no las utilizo, tengo experiencia en estas tecnologías gracias a proyectos anteriores y el instituto. En particular, utilicé C# en mi primer trabajo, como se detalla en mi currículum.",
+      "show": false,
+      "technologies": [
+        "C",
+        "C++",
+        "Java",
+        "C#",
+        "Python"
+      ]
+    },
+    {
+      "name": "Repositorios remotos y control de versiones",
+      "description": "Para mi uso personal uso GitHub. En el trabajo, he usado tanto GitLab como GitHub, y aquí siempre sigo las buenas prácticas para nombres de ramas, commits etc.",
+      "technologies": [
+        "GitHub",
+        "GitLab"
       ]
     }
   ],
@@ -77,15 +159,20 @@
     {
       "name": "La carrera por la dona",
       "date": "2025",
-      "description": "Un juego multijugador ",
+      "video": "laCarreraPorLaDona.mp4",
+      "description": "Juego de mesa multijugador inspirado en Los Simpsons, hecho con Angular, Socket.IO y json-server. Compite en un tablero lleno de desafíos estilo party game.",
       "technologies": [
         "Angular",
+        "SCSS",
+        "Bootstrap",
+        "ng-bootstrap",
         "Typescript",
-        "Bootstrap"
+        "nodejs",
+        "Socket.io",
+        "json-server"
       ],
       "show": true,
       "actions": {
-        "video": "laCarreraPorLaDona.mp4",
         "preview": "https://guillercm.github.io/la-carrera-por-la-dona/",
         "gitHub": "https://github.com/guillercm/la-carrera-por-la-dona"
       }
@@ -93,12 +180,12 @@
     {
       "name": "Componente de formulario",
       "date": "2025",
-      "image": "royalmon.png",
-      "description": "Un componente para la creación de formularios dinámicos",
+      "image": "grcm-components.png",
+      "description": "Un componente para la creación de formularios dinámicos. Está subido a NPM, cualquier desarrollador se lo podrá descargar y usar.",
       "technologies": [
         "Angular",
-        "Typescript",
-        "Bootstrap"
+        "Bootstrap",
+        "Typescript"
       ],
       "show": true,
       "actions": {
@@ -108,13 +195,20 @@
     {
       "name": "Angular",
       "date": "2024 - 2025",
-      "image": "royalmon.png",
-      "description": "Una aplicación que reune apuntes míos, pdfs, mini aplicaciones y el contenido de 2 cursos de angular que hice recientemente.",
+      "image": "angular.png",
+      "description": "Aplicación que reúne mis apuntes, PDFs, mini aplicaciones y contenido de dos cursos recientes de Angular. Incluye componentes, servicios y otras utilidades que luego reutilizo en mis proyectos.",
       "technologies": [
         "Angular",
-        "Typescript",
+        "Bootstrap",
         "Tailwind",
-        "Bootstrap"
+        "ng-bootstrap",
+        "Angular Material",
+        "Typescript",
+        "Tanstack",
+        "Mapbox",
+        "NestJS",
+        "Jasmine",
+        "Playwright"
       ],
       "show": true,
       "actions": {
@@ -140,6 +234,7 @@
     {
       "name": "Royalmon",
       "date": "2022",
+      "video": "royalmon.mp4",
       "description": "Un juego que combina el mundo de pokemon con el del clash royale. ¡Captura todos los royalmons y consigue todas las medallas de gimnasio!",
       "technologies": [
         "Angular",
@@ -148,7 +243,6 @@
       ],
       "show": true,
       "actions": {
-        "video": "royalmon.mp4",
         "preview": "https://guillercm.github.io/royalmon/",
         "gitHub": "https://github.com/guillercm/royalmon"
       }
@@ -157,7 +251,7 @@
       "name": "No He Sido Yo",
       "date": "2021",
       "image": "noHeSidoYo.png",
-      "description": "Un juego online divertido de preguntas de temáticas a elegir sobre hipotéticas situaciones para jugar con tus amigos.",
+      "description": "Un juego multijugador de preguntas de temáticas a elegir sobre hipotéticas situaciones. El funcionamiento multijugador está echo con ficheros de texto usando php, ya que en su día no conocía los sockets.",
       "technologies": [
         "HTML",
         "CSS",
@@ -172,6 +266,7 @@
     },
     {
       "name": "PlantasVsZombis",
+      "video": "plantasVsZombies.mp4",
       "date": "2021",
       "description": "Divertido juego de estrategia que consiste en matar a todos los zombis antes de que lleguen a tu casa. Recolecta soles para comprar plantas y defenderte.",
       "technologies": [
@@ -181,7 +276,6 @@
       ],
       "show": true,
       "actions": {
-        "video": "plantasVsZombies.mp4",
         "preview": "https://guillercm.github.io/plantasVsZombis/",
         "gitHub": "https://github.com/guillercm/plantasVsZombis"
       }
@@ -189,38 +283,46 @@
   ],
   "certificates": [
     {
+      "name": "Angular Pro: Lleva tus bases al siguiente nivel",
+      "date": "Abril 2025",
+      "description": "Certificado de Udemy",
+      "image": "angular-pro-certificate.png"
+    },
+    {
+      "name": "Angular: De cero a experto - Edición 2025",
+      "date": "Marzo 2025",
+      "description": "Certificado de Udemy",
+      "image": "angular-certificate.png"
+    },
+    {
       "name": "Java Fundamentals",
       "date": "Junio 2021",
       "description": "Certificado oficial de Oracle",
-      "image": "java.png",
-      "pdf": "java.pdf"
+      "image": "java.png"
     },
     {
       "name": "Database Programming with SQL",
       "date": "Diciembre 2021",
       "description": "Certificado oficial de Oracle",
-      "image": "oracle.png",
-      "pdf": "oracle.pdf"
+      "image": "oracle.png"
     },
     {
       "name": "API Rest con NodeJS y Express",
       "date": "Junio 2023",
       "description": "Certificado oficial de OpenWebinars",
       "image": "api_rest_node.png",
-      "pdf": "api_rest_node.pdf"
+      "show": false
     },
     {
       "name": "Javascript intermedio",
       "description": "Certificado oficial de OpenWebinars",
       "image": "javascript.png",
-      "pdf": "javascriptIntermedio.pdf",
       "show": false
     },
     {
       "name": "Unity",
       "description": "Certificado oficial de Certiport",
       "image": "unity.png",
-      "pdf": "unity.pdf",
       "show": false
     }
   ],
@@ -236,10 +338,10 @@
           "description": "Desarrollo con React."
         },
         {
-          "name": "MINISTERIO DE DEFENSA",
+          "name": "Ministerio de Defensa",
           "position": "Desarrollador",
           "date": "Octubre 2023 - Abril 2025",
-          "description": "Desarrollo con Angular, para la creación de componentes reutilizables, necesarios en distintas aplicaciones del Ministerio de Defensa con sus respectivos módulos para mostrar sus funcionalidades usando la herramienta del Storybook."
+          "description": "Desarrollé con Angular una librería de componentes reutilizables, documentados con Storybook, y módulos, ambos destinados a su uso en distintas aplicaciones del ministerio. También realizé algunas pruebas automatizadas con Playwright y Cypress."
         }
       ]
     },

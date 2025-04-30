@@ -8,7 +8,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ImgTecnologyPipe implements PipeTransform {
 
   transform(tecnology: string): unknown {
-    return `static/img/tecnologies/${tecnology.toLowerCase()}.png`;
+    return `static/img/tecnologies/${tecnology.toLowerCase().replaceAll(".", "-").replaceAll("#", "sharp")}.png`;
   }
 
 }

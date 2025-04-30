@@ -16,6 +16,7 @@ export interface Config {
 export interface Skill {
   name: string;
   description: string;
+  show?: boolean;
   technologies: string[];
 }
 
@@ -24,7 +25,6 @@ export interface Certificate {
   date?: string;
   description: string;
   image: string;
-  pdf: string;
   show?: boolean;
 }
 
@@ -52,7 +52,7 @@ export interface PersonalData {
   email: string;
   location: string;
   position: string;
-  portfolio: string;
+  portfolio: string[];
   socialNetworks: SocialNetworks;
 }
 
@@ -62,7 +62,6 @@ export interface Surnames {
 }
 
 export interface ProjectActions {
-  video?: string;
   preview?: string;
   npm?: string;
   gitHub?: string;
@@ -72,6 +71,7 @@ export interface Project {
   name: string;
   date: string;
   image?: string;
+  video?: string;
   description: string;
   technologies: string[];
   show: boolean;

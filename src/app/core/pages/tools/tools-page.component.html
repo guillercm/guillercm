@@ -21,7 +21,8 @@
         <ul class="space-y-2">
           <li>Email: <a [href]="'mailto:' + personalData().email" class="text-indigo-500 hover:underline">{{
               personalData().email }}</a></li>
-          <li>Teléfono: <a href="tel:+34123456789" class="text-indigo-500 hover:underline">{{ personalData().phone }}</a>
+          <li>Teléfono: <a href="tel:+34123456789" class="text-indigo-500 hover:underline">{{ personalData().phone
+              }}</a>
           </li>
           <li>Ubicación: {{ personalData().location }}</li>
           <li>GitHub: <a [href]="personalData().socialNetworks.gitHub" class="text-indigo-500 hover:underline">{{
@@ -35,8 +36,10 @@
         <h2 class="text-2xl font-semibold border-b-2 border-indigo-200 mb-2">Tecnologías</h2>
         <ul class="flex flex-wrap gap-2">
           @for (skill of config()?.skills; track $index) {
+          @if (skill.show !== false) {
           @for (tecnology of skill.technologies; track $index) {
           <li class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">{{tecnology}}</li>
+          }
           }
           }
         </ul>
@@ -45,13 +48,13 @@
         <h2 class="text-2xl font-semibold border-b-2 border-orange-300 mb-2">Certificados</h2>
         <div>
           @for (certificate of config()?.certificates; let index = $index; track $index) {
-            @if (certificate.show !== false) {
-              <div class="mt-2">
-                <h3 class="font-semibold text-md">{{ certificate.name }}</h3>
-                <p class="text-sm text-gray-600 ml-3">{{ certificate.date }}</p>
-                <p class="text-sm ml-3">{{ certificate.description }}</p>
-              </div>
-            }
+          @if (certificate.show !== false) {
+          <div class="mt-2">
+            <h3 class="font-semibold text-md">{{ certificate.name }}</h3>
+            <p class="text-sm text-gray-600 ml-3">{{ certificate.date }}</p>
+            <p class="text-sm ml-3">{{ certificate.description }}</p>
+          </div>
+          }
           }
         </div>
       </section>
@@ -64,8 +67,7 @@
           <p class="text-xl text-indigo-600 leading-tight">{{ personalData().position }}</p>
         </div>
         <div class="flex-shrink-0 w-30 h-30 rounded-full overflow-hidden bg-white border border-gray-300">
-          <img src="static/img/me-resume.png" alt="Foto de Perfil"
-            class="w-full h-full object-cover">
+          <img src="static/img/me-resume.png" alt="Foto de Perfil" class="w-full h-full object-cover">
         </div>
       </section>
 
@@ -76,32 +78,33 @@
           @if (workExperience.show !== false) {
           <div>
             @if (workExperience.position) {
-              <h3 class="font-semibold text-lg">{{ workExperience.company }}</h3>
-              <p class="text-sm text-gray-600">{{ workExperience.position }} · {{ workExperience.date }}</p>
-              @if (workExperience.description) {
-                <p class="text-sm mt-2">{{ workExperience.description }}</p>
-              }
+            <h3 class="font-semibold text-lg">{{ workExperience.company }}</h3>
+            <p class="text-sm text-gray-600">{{ workExperience.position }} · {{ workExperience.date }}</p>
+            @if (workExperience.description) {
+            <p class="text-sm mt-2">{{ workExperience.description }}</p>
+            }
             } @else {
-              <h3 class="font-semibold text-lg">{{ workExperience.company }}<span class="text-sm text-gray-600"> {{ workExperience.date }}</span></h3>
+            <h3 class="font-semibold text-lg">{{ workExperience.company }}<span class="text-sm text-gray-600"> {{
+                workExperience.date }}</span></h3>
             }
 
           </div>
           }
           @if (workExperience.projects?.length) {
-            <div class="space-y-3">
-              @for (project of workExperience.projects; track project) {
-                <div class="border-l-3 border-orange-300 pl-4">
-                  <h4 class="text-md font-semibold">{{ project.name }}</h4>
-                  <p class="text-sm text-gray-600">{{ project.position }} · {{ project.date }}</p>
-                  <p class="text-sm mt-1">{{ project.description }}</p>
-                </div>
-              }
+          <div class="space-y-3">
+            @for (project of workExperience.projects; track project) {
+            <div class="border-l-3 border-orange-300 pl-4">
+              <h4 class="text-md font-semibold">{{ project.name }}</h4>
+              <p class="text-sm text-gray-600">{{ project.position }} · {{ project.date }}</p>
+              <p class="text-sm mt-1">{{ project.description }}</p>
             </div>
+            }
+          </div>
           }
           }
         </div>
       </section>
-      <section  class="mb-4">
+      <section class="mb-4">
         <h2 class="text-2xl font-semibold border-b-2 border-orange-300 mb-2">Formación</h2>
         <div class="space-y-3">
           @for (train of config()?.training; let index = $index; track $index) {
@@ -117,4 +120,3 @@
   </div>
 
 </div>
-

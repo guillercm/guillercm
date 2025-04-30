@@ -1,4 +1,4 @@
-<!-- 
+<!--
 <div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
     <div class="px-3 py-2 border-b border-gray-200 dark:border-gray-600">
         <div class="flex flex-wrap items-center">
@@ -20,12 +20,12 @@
 
 <div class="grid grid-cols md:grid-cols-2 gap-5 mt-6 ">
     @for (skill of skills(); track $index) {
-    <div class="sm:pb-4 border-b-3 border-blue-900 mb-6" >
+    <div class="sm:pb-4 border-b-3 border-blue-900 mb-6 p-2" >
         <div class="flex flex-wrap gap-4 p-2 mb-2 list-none justify-center">
             @for (tecnology of skill.technologies; track $index) {
             <div class="flex flex-col items-center border border-gray-300 dark:border-gray-600 rounded-md p-2 w-20">
-                <img [src]="tecnology | imgTecnology" [alt]="tecnology" class="sm:w-12 sm:h-12 w-9 h-9">
-                <p class="mt-1 text-sm text-center text-gray-700 dark:text-gray-300 truncate">
+                <img [src]="tecnology | imgTecnology" [alt]="tecnology" class="object-contain sm:w-12 sm:h-12 w-9 h-9">
+                <p class="mt-1 text-sm text-center text-gray-700 dark:text-gray-300">
                     {{tecnology}}
                 </p>
             </div>

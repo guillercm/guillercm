@@ -1,5 +1,10 @@
-<button type="button" (click)="download.click()"
+
+<label for="message" class="w-100 block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+  <button type="button" (click)="download.click()"
   class="mt-4 cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-lg px-6 py-3 shadow-md transition duration-300">
   Descargar README.md
 </button>
+</label>
+<textarea rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">{{readmeContent()}}</textarea>
+
 <a #download [href]="downloadLink()" [hidden]="true" download="README.md"></a>

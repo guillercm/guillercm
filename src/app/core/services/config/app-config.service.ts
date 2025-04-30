@@ -1,7 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
-
-import { toSignal } from '@angular/core/rxjs-interop';
 import { Config } from '@core/interfaces/config/config.interface';
 import { environment } from '@environments/environments';
 import { take, tap } from 'rxjs';

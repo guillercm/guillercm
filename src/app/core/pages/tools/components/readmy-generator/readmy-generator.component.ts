@@ -23,6 +23,10 @@ export class ReadmyGeneratorComponent implements OnInit {
 
   protected readonly config = computed(() => this._appConfigService.config() )
 
+  private _readmeContent = signal<string>("");
+
+  protected readonly readmeContent = this._readmeContent.asReadonly();
+
   ngOnInit(): void {
     this.initialize();
   }
@@ -33,6 +37,7 @@ export class ReadmyGeneratorComponent implements OnInit {
 
   private generateReadmy() {
     const fileContent = this.generateReadmeContent();
+    this._readmeContent.set(fileContent);
     const blob = new Blob([fileContent], { type: 'text/markdown;charset=utf-8' });
     const url = window.URL.createObjectURL(blob);
     this._downloadLink.set(this._domSanitizer.bypassSecurityTrustUrl(url));
@@ -41,7 +46,7 @@ export class ReadmyGeneratorComponent implements OnInit {
   private generateReadmeContent() {
     const config = this._appConfigService.config();
     if (!config) return '';
-    const getImgTecnology = (nameTecnology: string) => `public/static/img/tecnologies/${nameTecnology.toLowerCase()}.png`;
+    const getImgTecnology = (nameTecnology: string) => `public/static/img/tecnologies/${nameTecnology.toLowerCase().replaceAll(".", "-").replaceAll("#", "sharp")}.png`;
     const fullName = `${config.personalData.name} ${config.personalData.surnames.first} ${config.personalData.surnames.second}`
     let content = `
 <div align="center">
@@ -86,7 +91,7 @@ export class ReadmyGeneratorComponent implements OnInit {
         config.skills.forEach((skill: Skill) => {
           html += `\n### ${skill.name}\n`
           skill.technologies.forEach((technology: string) => {
-            html += `<img src="${getImgTecnology(technology)}" alt="${technology}" width="40" height="40"/>`
+            html += `<img src="${getImgTecnology(technology)}" alt="${technology}" width="40" height="40" style="margin-right: 10px;"/>`
           })
           html += '\n'
         })
@@ -108,12 +113,18 @@ ${(() => {
                 htmlProjects += `${(j === 1 ? '<table><tr>' : '')}<td width="50%">
                     <h3 align="center">${project.name}</h3>
                     <div align="center">
-                        <img src="public/static/img/projects/${project.image}" width="300" alt="${project.name}" title="${project.name}">
+                        ${(() => {
+                           if (project.video) {
+                              return `
+public/static/video/projects/${project.name}.mp4`
+                           }
+                          return `<img src="public/static/img/projects/${project.image}" width="300" alt="${project.name}" title="${project.name}">`
+                        })()}
                         <p align="left">${project.description}</p>
                             ${(() => {
                                 let html = '';
                                 project.technologies.forEach((technology: string) => {
-                                  html += `<img src="${getImgTecnology(technology)}" alt="${technology}" width="30" height="30" />&nbsp;`
+                                  html += `<img src="${getImgTecnology(technology)}" alt="${technology}" width="30" height="30" style="margin-right: 10px;" />&nbsp;`
                                 })
                                 if (project.actions.gitHub) {
                                   html += `<p>
