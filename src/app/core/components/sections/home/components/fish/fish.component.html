@@ -1,0 +1,31 @@
+@switch (fish().direction) {
+  @case ('left') {
+    <div class="absolute opacity-8 fish-left left-[-60px] animate-swim-right" [ngStyle]="containerFishStyles()">
+      <div class="relative" [ngStyle]="fishStyles()">
+        <ng-container *ngTemplateOutlet="svgFish"></ng-container>
+      </div>
+    </div>
+  }
+  @case ('right') {
+    <div class="absolute opacity-8 fish-right right-[-60px] animate-swim-right" [ngStyle]="containerFishStyles()">
+      <div class="relative scale-x-[-1]" [ngStyle]="fishStyles()">
+        <ng-container *ngTemplateOutlet="svgFish"></ng-container>
+      </div>
+    </div>
+  }
+}
+
+<ng-template #svgFish>
+  <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512.000000 258.000000" preserveAspectRatio="xMidYMid meet">
+  <g transform="translate(0.000000,258.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+    <path d="M152 2557 c-53 -20 -103 -66 -128 -121 l-24 -51 0 -1095 0 -1095 24
+    -51 c49 -106 155 -154 271 -123 34 9 108 78 493 462 l453 452 25 -30 c187
+    -220 278 -309 451 -437 312 -232 674 -380 1078 -440 133 -19 472 -17 615 5
+    683 105 1295 509 1643 1085 86 141 86 199 5 336 -346 579 -962 988 -1648 1093
+    -143 22 -482 24 -615 5 -404 -60 -766 -208 -1078 -440 -173 -129 -262 -215
+    -451 -437 l-25 -30 -448 447 c-373 373 -455 450 -492 463 -51 18 -103 18 -149
+    2z" />
+      </g>
+    </svg>
+</ng-template>

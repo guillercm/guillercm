@@ -1,13 +1,19 @@
-.tecnology-block code {
-    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
-    color: #fff;
-    background-color: #1e2939;
-    border-radius: .222222em;
-    padding: .333333em .555556em;
-    font-size: .875em;
-    font-weight: 600;
+.technologiy-container {
+  transition: 0.5s;
+  animation-name: reveal;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 35%;
+  transform-origin: center;
 }
-.tecnology-block p {
-    margin-top: 1.25em;
-    margin-bottom: 1.25em;
+
+
+@keyframes reveal {
+  from {
+    transform: translateZ(0) scale(0)
+  }
+  to {
+    transform: translateZ(0) scale(1)
+  }
 }

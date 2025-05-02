@@ -4,7 +4,8 @@ export interface Config {
     description: string;
   };
   portfolio: {
-    description: string;
+    home: string;
+    aboutMe: string[];
   };
   skills: Skill[];
   training: Training[];

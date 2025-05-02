@@ -8,5 +8,5 @@ import { Component, input } from '@angular/core';
 })
 export class AboutMeSectionComponent {
 
-  public description = input.required<string[]>();
+  public aboutMe = input.required<string[]>();
 }

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, input, signal } from '@angular/core';
 import { Certificate } from '@core/interfaces/config/config.interface';
+import { finalize, Subscription, takeWhile, timer } from 'rxjs';
 
 @Component({
   selector: 'core-certificates',
@@ -10,11 +11,13 @@ import { Certificate } from '@core/interfaces/config/config.interface';
 })
 export class CertificatesComponent {
 
-  public certificates = input.required<Certificate[]>(); 
+  private certificateAnimationSub?: Subscription;
+
+  public certificates = input.required<Certificate[]>();
 
   private _activeIndexCertificate = signal<number>(0);
 
-  private _activeCertificate = computed<Certificate>(() => 
+  private _activeCertificate = computed<Certificate>(() =>
     this.certificates()[this._activeIndexCertificate()]
   )
 
@@ -23,7 +26,23 @@ export class CertificatesComponent {
   }
 
   protected setActiveCertificate(index: number) {
-    this._activeIndexCertificate.set(index);
+    const currentIndex = this._activeIndexCertificate();
+    if (currentIndex === index) return;
+    if (this.certificateAnimationSub?.closed === false) return;
+    this.certificateAnimationSub?.unsubscribe();
+    const step = index > currentIndex ? 1 : -1;
+    let current = currentIndex;
+    this.certificateAnimationSub = timer(0, 250)
+      .pipe(
+        takeWhile(() => current !== index),
+        finalize(() => {
+          this._activeIndexCertificate.set(index);
+        })
+      )
+      .subscribe(() => {
+        current += step;
+        this._activeIndexCertificate.set(current);
+      });
   }
 
   protected nextActiveCertificate() {
@@ -55,6 +74,6 @@ export class CertificatesComponent {
     if (index === this.getIndexNextCertificate()) return 'translate-x-full';
     return ' translate-x-0 hidden';
   }
-  
+
 
 }

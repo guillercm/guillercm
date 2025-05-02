@@ -1,10 +1,36 @@
-<div #waterContainer class="h-svh bg-water position-relative">
-  @for (fish of fish(); track $index) {
-    <div #divFish class="fish" [ngStyle]="getStylesFish(fish)"></div>
-  }
-  <div class=" text-center mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 py-32">
-    <h2 class="[text-shadow:_0_2px_4px_rgb(99_102_241_/_0.8)] inline-block transform hover:-translate-y-1 hover:scale-110 transition duration-500 ease-in-out text-center text-xl font-semibold text-secondary italic">{{personalData().position}}</h2>
-    <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-water-primary sm:text-5xl">{{fullName()}}</p>
-  </div>
-</div>
+<div class="relative h-svh bg-water w-full overflow-hidden flex items-center justify-center text-white">
 
+  <div class="flex flex-row items-center justify-center px-5 px-10:sm lg:px-20 w-full z-[1]">
+    <div class="flex flex-col justify-center w-full h-full gap-5 m-auto text-start">
+      <div class="flex flex-col gap-6 text-5xl md:text-6xl font-bold text-white max-w-[700px] w-auto h-auto"
+        style="opacity: 1; will-change: auto; transform: none;">
+        <p class="flex flex-col justify-center gap-y-3 text-wrap">
+          <span>Soy <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-cyan-200">{{ fullName()
+              }}</span></span>
+          <span class="info-position text-2xl font-medium">{{ personalData().position.replaceAll(" ", "&nbsp;") }}</span></p>
+      </div>
+      <p class="text-lg text-white-400 my-5 max-w-[600px] min-w-[200px] font-mono"
+        style="opacity: 1; will-change: auto; transform: none;">{{ description() }}</p>
+    </div>
+    <div class="flex items-center justify-center w-full h-full hidden items-center justify-center lg:flex">
+      <div class="bubble flex items-center justify-center">
+        <a
+    href="/tu-cv.pdf"
+    download
+  >
+    Descargar CV
+  </a>
+      </div>
+      <!-- <div
+      class="w-40 h-40 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:bg-white/20">
+      <span class="block group-hover:hidden">{{ personalData().position }}</span>
+      <span class="hidden group-hover:block font-bold">{{ fullName() }}</span>
+    </div> -->
+    </div>
+
+
+    @for (item of fish(); track $index) {
+    <core-fish [fish]="item"></core-fish>
+    }
+
+  </div>

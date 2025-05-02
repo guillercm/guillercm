@@ -1,8 +1,8 @@
 
 @if (config()) {
-  <core-home-section [personalData]="config()!.personalData"></core-home-section>
+  <core-home-section [personalData]="config()!.personalData" [description]="config()!.portfolio.home"></core-home-section>
   <core-layout-section sectionTitle="Sobre mí" sectionId="sobre-mi">
-    <core-about-me-section [description]="config()!.portfolio.description"></core-about-me-section>
+    <core-about-me-section [aboutMe]="config()!.portfolio.aboutMe"></core-about-me-section>
   </core-layout-section>
   <core-layout-section sectionTitle="Proyectos" sectionId="proyectos">
     <core-projects-section [projects]="config()!.projects"></core-projects-section>

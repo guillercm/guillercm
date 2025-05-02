@@ -1,0 +1,35 @@
+/* Animación de peces */
+.fish-left {
+  animation: swim-left linear infinite;
+}
+
+.fish-right {
+  animation: swim-right linear infinite;
+}
+
+@keyframes swim-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
+
+@keyframes swim-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120vw);
+  }
+}
+
+@keyframes ocean {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}

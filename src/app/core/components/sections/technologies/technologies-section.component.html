@@ -1,44 +1,63 @@
-<!--
-<div class="w-full border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-    <div class="px-3 py-2 border-b border-gray-200 dark:border-gray-600">
-        <div class="flex flex-wrap items-center">
-            <div class="flex items-center space-x-1 rtl:space-x-reverse flex-wrap">
-                <div class="shrink-0">
-                    <img class="w-8 h-8 rounded-full" src="static/img/tecnologies/html.png" alt="Neil image">
-                 </div>
-            </div>
+<!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6">
+  @for (skill of skills(); track $index) {
+  <div class="flex flex-col border-b-3 border-blue-900 mb-6 p-2">
+    <div class="flex-1 flex flex-wrap gap-4 p-2 mb-2 list-none justify-center">
+      @for (tecnology of skill.technologies; track $index) {
+      <div class="flex flex-col items-center justify-center m-auto border border-gray-300 dark:border-gray-600 rounded-md p-2 w-26 h-26 rounded-xl">
+        <img [src]="tecnology | imgTecnology" [alt]="tecnology" class="object-contain sm:w-12 sm:h-12 w-9 h-9">
+        <p class="mt-1 text-sm text-center text-gray-700 dark:text-gray-300">
+          {{tecnology}}
+        </p>
+      </div>
+      }
     </div>
-</div>
-<div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
-    <label class="sr-only">Publish post</label>
-    <div class="tecnology-block block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400">
-        <div contenteditable="true" translate="no" class="tiptap ProseMirror format lg:format-lg dark:format-invert focus:outline-none format-blue max-w-none" tabindex="0"><p>Flowbite is an <strong>open-source library of UI components</strong> based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p><p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, datepickers, advanced charts and the list goes on.</p><p>Here is an example of a button component:</p><p><code>&lt;button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"&gt;Default&lt;/button&gt;</code></p><p>Learn more about all components from the <a target="_blank" rel="noopener noreferrer nofollow" href="https://flowbite.com/docs/getting-started/introduction/">Flowbite Docs</a>.</p></div>
+    <div class="m-auto text-center">
+      <p class="text-base lg:text-lg font-medium text-gray-900 dark:text-white">
+        {{skill.name}}
+      </p>
+      <p class="text-sm lg:text-base text-gray-500 dark:text-gray-400">
+        {{skill.description}}
+      </p>
     </div>
-</div>
+  </div>
+  }
 </div> -->
+<!-- @for (skill of skills(); track $index) {
+  @for (tecnology of skill.technologies; track $index) {
+    <img [src]="tecnology | imgTecnology" [alt]="tecnology">
+    {{tecnology}}
+  }
+  {{skill.name}}
+  {{skill.description}}
+} -->
+<div class="grid gap-10 lg:grid-cols-2">
+  @for (skill of skills(); track $index) {
+    <div
+      class="technologiy-container relative group bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 shadow-xl overflow-hidden transition-transform duration-500 hover:scale-[1.03] hover:shadow-2xl"
+    >
+      <!-- Fondo decorativo animado -->
+      <div
+        class="absolute -top-10 -right-10 w-40 h-40 bg-blue-500 opacity-20 rounded-full blur-3xl group-hover:scale-110 transition-transform"
+      ></div>
 
+      <!-- Contenido principal -->
+      <h3 class="text-2xl font-extrabold text-white mb-2 drop-shadow">{{ skill.name }}</h3>
+      <p class="text-base text-gray-300 mb-5 leading-relaxed">{{ skill.description }}</p>
 
-<div class="grid grid-cols md:grid-cols-2 gap-5 mt-6 ">
-    @for (skill of skills(); track $index) {
-    <div class="sm:pb-4 border-b-3 border-blue-900 mb-6 p-2" >
-        <div class="flex flex-wrap gap-4 p-2 mb-2 list-none justify-center">
-            @for (tecnology of skill.technologies; track $index) {
-            <div class="flex flex-col items-center border border-gray-300 dark:border-gray-600 rounded-md p-2 w-20">
-                <img [src]="tecnology | imgTecnology" [alt]="tecnology" class="object-contain sm:w-12 sm:h-12 w-9 h-9">
-                <p class="mt-1 text-sm text-center text-gray-700 dark:text-gray-300">
-                    {{tecnology}}
-                </p>
-            </div>
-            }
-        </div>
-        <div class="text-center">
-            <p class="text-sm font-medium text-gray-900 dark:text-white">
-                {{skill.name}}
-            </p>
-            <p class="text-sm text-gray-500 dark:text-gray-400">
-                {{skill.description}}
-            </p>
-        </div>
+      <div class="flex flex-wrap gap-4">
+        @for (technology of skill.technologies; track $index) {
+          <div
+            class="w-25 h-25 bg-white/10 hover:bg-white/20 rounded-xl flex flex-col items-center justify-center transition-all duration-300 text-white text-xs font-medium text-center px-1"
+          >
+            <img
+              [src]="technology | imgTecnology"
+              [alt]="technology"
+              class="w-12 object-contain mb-1"
+            />
+            <span class="leading-tight text-base">{{ technology }}</span>
+          </div>
+        }
+      </div>
     </div>
-    }
+  }
 </div>

@@ -21,10 +21,10 @@
     "description": "Mi pasión por la programación se refleja en mis proyectos personales, los cuales están disponibles en mi portfolio y han sido fundamentales para mi crecimiento y mejora como programador."
   },
   "portfolio": {
-    "description": [
+    "home": "Mi dedicación y pasión por la programación me han llevado a aprender constantemente desarrollando mis propios proyectos. Cuando me enfrento a desafíos o problemas, me sumerjo en ellos hasta encontrar la solución que busco.",
+    "aboutMe": [
       "¡Hola! Me llamo Guillermo Ruiz-Cortina Martínez, y soy un apasionado de la programación.",
-      "Incluso antes de empezar la formación profesional ya tenía claro que lo mío era programar. A lo largo del tiempo he trabajado con distintos lenguajes y frameworks, aunque últimamente dedico más tiempo a seguir aprendiendo Angular.",
-      "Mi dedicación y pasión por la programación me han llevado a aprender constantemente desarrollando mis propios proyectos. Cuando me enfrento a desafíos o problemas, me sumerjo en ellos hasta encontrar la solución que busco."
+      "Incluso antes de empezar la formación profesional ya tenía claro que lo mío era programar. A lo largo del tiempo he trabajado con distintos lenguajes y frameworks, aunque últimamente dedico más tiempo a seguir aprendiendo Angular."
     ]
   },
   "skills": [
@@ -39,7 +39,7 @@
     },
     {
       "name": "Estilos y frameworks de diseño",
-      "description": "Aprendí Tailwind recientemente en un curso de Angular. Las otras tres tecnologías las vi en el instituto y las uso con frecuencia. Suelo trabajar con SCSS para personalizar variables de Bootstrap, e incluso creé una función propia para generar clases CSS personalizadas.",
+      "description": "Aprendí Tailwind en un curso de Angular. Las otras tres tecnologías las vi en el instituto y las uso con frecuencia. Suelo trabajar con SCSS para personalizar variables de Bootstrap, e incluso creé una función propia para generar clases CSS personalizadas.",
       "technologies": [
         "CSS",
         "SCSS",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Frameworks y librerías de desarrollo frontend",
-      "description": "Conocí Angular y React en el instituto, y luego profundicé en el trabajo: primero con Angular y actualmente con React. Aunque uso ambos, Angular es mi favorito y en el que más he invertido tiempo a través de proyectos personales y cursos.",
+      "description": "Conocí Angular y React en el instituto, y más tarde en el trabajo. Aunque uso ambos, Angular es mi favorito y en el que más he invertido tiempo a través de proyectos personales y cursos.",
       "technologies": [
         "Angular",
         "React"
@@ -88,7 +88,7 @@
     },
     {
       "name": "Bases de datos relacionales y NoSQL",
-      "description": "No las utilizo en mi día a día, pero tengo conocimientos básicos de estas tecnologías. MySQL fue la primera base de datos que aprendí y es con la que más experiencia tengo.",
+      "description": "No las utilizo en mi día a día, pero tengo una buena base de estas tecnologías. MySQL fue la primera base de datos que aprendí y es con la que más experiencia tengo.",
       "show": false,
       "technologies": [
         "MySQL",
@@ -128,7 +128,7 @@
     },
     {
       "name": "Repositorios remotos y control de versiones",
-      "description": "Para mi uso personal uso GitHub. En el trabajo, he usado tanto GitLab como GitHub, y aquí siempre sigo las buenas prácticas para nombres de ramas, commits etc.",
+      "description": "Para mi uso personal uso GitHub. En el trabajo, he usado tanto GitHub como GitLab, siguiendo las buenas prácticas para nombres de ramas, commits etc.",
       "technologies": [
         "GitHub",
         "GitLab"
