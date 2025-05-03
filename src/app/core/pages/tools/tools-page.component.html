@@ -45,7 +45,7 @@
         </ul>
       </section>
       <section class="mb-4">
-        <h2 class="text-2xl font-semibold border-b-2 border-orange-300 mb-2">Certificados</h2>
+        <h2 class="text-2xl border-b-2 border-indigo-200 mb-2">Certificados</h2>
         <div>
           @for (certificate of config()?.certificates; let index = $index; track $index) {
           @if (certificate.show !== false) {
@@ -106,7 +106,7 @@
       </section>
       <section class="mb-4">
         <h2 class="text-2xl font-semibold border-b-2 border-orange-300 mb-2">Formación</h2>
-        <div class="space-y-3">
+        <div class="space-y-2">
           @for (train of config()?.training; let index = $index; track $index) {
           <div>
             <h3 class="font-semibold text-md">{{ train.name }}</h3>

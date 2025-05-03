@@ -67,9 +67,10 @@
     },
     {
       "name": "Librerías de Angular/React",
-      "description": "Aprendí Tanstack en un curso de Angular y, más adelante, empecé a usarlo también en el trabajo con React. Mapbox lo conocí en otro curso de Angular, pero luego profundicé por mi cuenta mediante la documentación y realicé mejoras en la aplicación, la cual está disponible en mi repositorio 'Angular'. Zustand lo utilizo actualmente con React en el trabajo.",
+      "description": "He utilizado Storybook en Angular y React para crear, documentar y estudiar componentes, con el fin de aplicarlos en las aplicaciones del trabajo. Aprendí Tanstack en un curso de Angular y, más adelante, empecé a usarlo también en el trabajo con React. Mapbox lo conocí en otro curso de Angular, pero luego profundicé por mi cuenta mediante la documentación y realicé mejoras en la aplicación, la cual está disponible en mi repositorio 'Angular'. Zustand lo utilizo actualmente con React en el trabajo.",
       "show": false,
       "technologies": [
+        "Storybook",
         "Tanstack",
         "Mapbox",
         "Zustand"
@@ -335,16 +336,16 @@
       "date": "Octubre 2023 - Actualidad",
       "projects": [
         {
-          "name": "Salut",
+          "name": "Generalitat de Cataluña | Salut",
           "position": "Desarrollador",
           "date": "Abril 2025 - Actualidad",
-          "description": "Desarrollo con React."
+          "description": "Desarrollo aplicaciones de gestión sanitaria con React para la Generalitat de Cataluña, utilizando librerías modernas como TanStack Query y Zustand. Trabajo con componentes reutilizables dentro de un sistema de diseño documentado en Storybook."
         },
         {
           "name": "Ministerio de Defensa",
           "position": "Desarrollador",
           "date": "Octubre 2023 - Abril 2025",
-          "description": "Desarrollé con Angular una librería de componentes reutilizables, documentados con Storybook, y módulos, ambos destinados a su uso en distintas aplicaciones del ministerio. También realizé algunas pruebas automatizadas con Playwright y Cypress."
+          "description": "Desarrollé con Angular una librería de componentes reutilizables (documentados con Storybook), y módulos. Ambos destinados a su uso en distintas aplicaciones del ministerio. También realizé algunas pruebas automatizadas con Playwright y Cypress."
         }
       ]
     },

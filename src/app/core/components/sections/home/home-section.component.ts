@@ -4,11 +4,12 @@ import { PersonalData } from '@core/interfaces/config/config.interface';
 import { WINDOW } from '@core/tokens/window/window.injection-token';
 import { Fish } from './interfaces/fish.interface';
 import { FishComponent } from '@core/components/sections/home/components/fish/fish.component';
-import { randomNumber, range } from '@core/helpers/functions/random.functions';
+import { randomNumber } from '@core/helpers/functions/random.functions';
+import { SocialIconComponent } from '@core/components/social-icon/social-icon.component';
 
 @Component({
   selector: 'core-home-section',
-  imports: [CommonModule, FishComponent],
+  imports: [CommonModule, FishComponent, SocialIconComponent],
   templateUrl: './home-section.component.html',
   styleUrl: './home-section.component.css',
   host: {

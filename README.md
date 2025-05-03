@@ -50,7 +50,7 @@
 <img src="public/static/img/tecnologies/ng-bootstrap.png" alt="ng-bootstrap" width="40" height="40" style="margin-right: 10px;"/><img src="public/static/img/tecnologies/angular material.png" alt="Angular Material" width="40" height="40" style="margin-right: 10px;"/><img src="public/static/img/tecnologies/primeng.png" alt="PrimeNG" width="40" height="40" style="margin-right: 10px;"/>
 
 ### Librerías de Angular/React
-<img src="public/static/img/tecnologies/tanstack.png" alt="Tanstack" width="40" height="40" style="margin-right: 10px;"/><img src="public/static/img/tecnologies/mapbox.png" alt="Mapbox" width="40" height="40" style="margin-right: 10px;"/><img src="public/static/img/tecnologies/zustand.png" alt="Zustand" width="40" height="40" style="margin-right: 10px;"/>
+<img src="public/static/img/tecnologies/storybook.png" alt="Storybook" width="40" height="40" style="margin-right: 10px;"/><img src="public/static/img/tecnologies/tanstack.png" alt="Tanstack" width="40" height="40" style="margin-right: 10px;"/><img src="public/static/img/tecnologies/mapbox.png" alt="Mapbox" width="40" height="40" style="margin-right: 10px;"/><img src="public/static/img/tecnologies/zustand.png" alt="Zustand" width="40" height="40" style="margin-right: 10px;"/>
 
 ### Frameworks y lenguajes backend
 <img src="public/static/img/tecnologies/php.png" alt="PHP" width="40" height="40" style="margin-right: 10px;"/><img src="public/static/img/tecnologies/spring boot.png" alt="Spring Boot" width="40" height="40" style="margin-right: 10px;"/><img src="public/static/img/tecnologies/nodejs.png" alt="nodejs" width="40" height="40" style="margin-right: 10px;"/><img src="public/static/img/tecnologies/nestjs.png" alt="NestJS" width="40" height="40" style="margin-right: 10px;"/>
