@@ -53,7 +53,7 @@ export class ReadmyGeneratorComponent implements OnInit {
 
 <h1 align="left">Hola 👋, soy <a href="${config.personalData.nickname}">
 <span>
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2500&pause=500&width=435&lines=${fullName};${config.personalData.position.replace(" ", "+")}" alt="${fullName}" title="${fullName}"
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2500&pause=500&width=435&lines=${fullName.replaceAll(" ", "+")};${config.personalData.position.replace(" ", "+")}" alt="${fullName}" title="${fullName}"
   style="margin-bottom: -26.5px;background: transparent;max-width: 100%;margin-left: 5px;" />
   </span>
   </a>

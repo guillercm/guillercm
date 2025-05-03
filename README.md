@@ -3,7 +3,7 @@
 
 <h1 align="left">Hola 👋, soy <a href="guillercm">
 <span>
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2500&pause=500&width=435&lines=Guillermo Ruíz-Cortina Martínez;Desarrollador+Software" alt="Guillermo Ruíz-Cortina Martínez" title="Guillermo Ruíz-Cortina Martínez"
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2500&pause=500&width=435&lines=Guillermo+Ruíz-Cortina+Martínez;Desarrollador+Software" alt="Guillermo Ruíz-Cortina Martínez" title="Guillermo Ruíz-Cortina Martínez"
   style="margin-bottom: -26.5px;background: transparent;max-width: 100%;margin-left: 5px;" />
   </span>
   </a>
