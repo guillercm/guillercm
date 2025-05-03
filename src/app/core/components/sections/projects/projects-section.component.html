@@ -1,6 +1,6 @@
 @let animateGradientBorder =
 "[background:linear-gradient(45deg,#172033,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border border-transparent animate-border block";
-<div class="grid grid-cols md:grid-cols-2 gap-5 mt-6">
+<div class="div-projects grid grid-cols md:grid-cols-2 gap-5 mt-6">
   @for (project of projects(); let even = $even; track $index) {
   <div class="project-container" [class.revealLeft]="even" [class.revealRight]="!even">
     <div class=" shadow-md rounded-lg shadow-md overflow-hidden" [ngClass]="animateGradientBorder">

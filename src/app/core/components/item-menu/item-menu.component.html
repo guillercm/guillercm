@@ -4,16 +4,15 @@
     <a [routerLink]="[]" [fragment]="data().sectionId" class="text-primary drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] m-6 group w-max">
       <span>{{data().label | uppercase}}</span>
       @if (isActive()) {
-        <span class="absolute -bottom-1 left-1/2 w-3/6 transition-all h-0.5 bg-secondary"></span>
-        <span class="absolute -bottom-1 right-1/2 w-3/6 transition-all h-0.5 bg-secondary"></span>
+        <span class="absolute -bottom-1 left-1/2 w-3/6 h-0.5 bg-secondary"></span>
+        <span class="absolute -bottom-1 right-1/2 w-3/6 h-0.5 bg-secondary"></span>
       } @else {
         <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-secondary group-hover:w-3/6"></span>
         <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-secondary group-hover:w-3/6"></span>
       }
   </a>
-  }@case ('movil') {
+  } @case ('movil') {
     <a [routerLink]="[]" [fragment]="data().sectionId"
     class="mt-3 -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-primary" [class.bg-primary-hover]="!isActive()" [class.bg-primary]="isActive()">{{data().label}}</a>
-
   }
 }

@@ -49,7 +49,7 @@
     },
     {
       "name": "Frameworks y librerías de desarrollo frontend",
-      "description": "Conocí Angular y React en el instituto, y más tarde en el trabajo. Aunque uso ambos, Angular es mi favorito y en el que más he invertido tiempo a través de proyectos personales y cursos.",
+      "description": "Conocí Angular y React en el instituto. Aunque he usado ambos en el trabajo, Angular es mi favorito y en el que más he invertido tiempo a través de proyectos personales y cursos.",
       "technologies": [
         "Angular",
         "React"

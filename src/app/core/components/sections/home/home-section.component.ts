@@ -43,11 +43,11 @@ export class HomeSectionComponent implements AfterViewInit {
         color: '#1a1a23',
         size: randomNumber(20, 30),
         delay: randomNumber(1, 10) / 2,
-        velocity: randomNumber(5, 10),
+        velocity: randomNumber(6, 10),
         top
       }
       fish.push(newFish);
-      top += randomNumber(3,7);
+      top += randomNumber(4,6);
       index++;
     }
     this._fish.set(fish);
