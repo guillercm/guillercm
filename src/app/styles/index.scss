@@ -2,9 +2,12 @@
 @use "theme";
 @use "section-home";
 
+:root {
+  color-scheme: only light;
+}
+
 html {
   scroll-behavior: smooth;
 }
-
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));

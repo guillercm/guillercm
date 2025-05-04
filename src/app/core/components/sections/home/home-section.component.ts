@@ -42,7 +42,7 @@ export class HomeSectionComponent implements AfterViewInit {
       const newFish: Fish = {
         direction: index % 2 === 0 ? 'left' : 'right',
         color: '#1a1a23',
-        size: randomNumber(20, 30),
+        size: randomNumber(30, 35),
         delay: randomNumber(1, 10) / 2,
         velocity: randomNumber(6, 10),
         top

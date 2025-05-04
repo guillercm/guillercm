@@ -4,7 +4,7 @@
         @for (certificate of certificates(); let index = $index; track $index) {
             <div [ngClass]="classesByCertificateIndex(index)"
                 class=" duration-700 ease-in-out absolute inset-0 transition-transform transform" data-carousel-item>
-                <img [src]="'static/img/certificates/' + certificate.image" [alt]="certificate" [alt]="certificate"
+                <img  loading="lazy" [src]="'static/img/certificates/' + certificate.image" [alt]="certificate" [alt]="certificate"
                     class="object-contain h-full w-auto absolute block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 pb-10">
             </div>
         }

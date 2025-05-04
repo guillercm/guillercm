@@ -7,7 +7,7 @@
       @if (project.video) {
         <shared-video class="w-full" classes="h-65" [source]="'static/video/projects/' + project.video"></shared-video>
       } @else {
-        <img [src]="'static/img/projects/' + project.image" alt="Proyecto 1" class="w-full h-65 object-cover">
+        <img loading="lazy" [src]="'static/img/projects/' + project.image" alt="Proyecto 1" class="w-full h-65 object-cover">
       }
       <div class="p-6">
         <h3 class="text-2xl font-semibold text-primary mb-2">{{ project.name }}<span class="text-sm"> ({{ project.date }})</span></h3>
@@ -16,7 +16,7 @@
           @for (tecnology of project.technologies; track $index) {
           <div [title]="tecnology"
             class="flex items-center bg-indigo-100 text-indigo-800 text-sm font-semibold rounded-full px-2 py-1">
-            <img [src]="tecnology | imgTecnology" [alt]="tecnology" class="object-contain w-4 h-4 mr-1">{{tecnology}}
+            <img loading="lazy" [src]="tecnology | imgTecnology" [alt]="tecnology" class="object-contain w-4 h-4 mr-1">{{tecnology}}
           </div>
           }
         </div>

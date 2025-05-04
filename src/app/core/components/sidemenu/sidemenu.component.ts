@@ -31,10 +31,6 @@ export class SidemenuComponent {
     }
   });
 
-  jumpToSection(fragment: string | null) {
-    console.log(fragment)
-  }
-
   protected readonly movilMenuIsOpen = this._movilMenuIsOpen.asReadonly();
 
   protected openMovilMenu() {
