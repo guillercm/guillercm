@@ -333,12 +333,18 @@
   "workExperience": [
     {
       "company": "Atos",
-      "date": "Octubre 2023 - Actualidad",
+      "date": "Octubre 2023 - Diciembre 2025",
       "projects": [
+        {
+          "name": "Wowproject | Atos",
+          "position": "Desarrollador",
+          "date": "Septiembre 2025 - Diciembre 2025",
+          "description": "Desarrollo de una plataforma de aprendizaje en React."
+        },
         {
           "name": "Generalitat de Cataluña | Salut",
           "position": "Desarrollador",
-          "date": "Abril 2025 - Actualidad",
+          "date": "Abril 2025 - Septiembre 2025",
           "description": "Desarrollo aplicaciones de gestión sanitaria con React para la Generalitat de Cataluña, utilizando librerías modernas como TanStack Query y Zustand. Trabajo con componentes reutilizables dentro de un sistema de diseño documentado en Storybook."
         },
         {

@@ -61,7 +61,6 @@
     </div>
     <div class="bg-orange-100 p-8">
       <section class="flex items-center mb-4">
-
         <div class="flex flex-col justify-center">
           <h1 class="text-3xl font-bold leading-tight">{{ fullName() }}</h1>
           <p class="text-xl text-indigo-600 leading-tight">{{ personalData().position }}</p>
@@ -70,7 +69,6 @@
           <img src="static/img/me-resume.png" alt="Foto de Perfil" class="w-full h-full object-cover">
         </div>
       </section>
-
       <section class="mb-4">
         <h2 class="text-2xl font-semibold border-b-2 border-orange-300 mb-2">Experiencia Laboral</h2>
         <div class="space-y-2">
@@ -81,7 +79,7 @@
             <h3 class="font-semibold text-lg">{{ workExperience.company }}</h3>
             <p class="text-sm text-gray-600">{{ workExperience.position }} · {{ workExperience.date }}</p>
             @if (workExperience.description) {
-            <p class="text-sm mt-2">{{ workExperience.description }}</p>
+            <p class="text-xs mt-2">{{ workExperience.description }}</p>
             }
             } @else {
             <h3 class="font-semibold text-lg">{{ workExperience.company }}<span class="text-sm text-gray-600"> {{
@@ -96,7 +94,7 @@
             <div class="border-l-3 border-orange-300 pl-4">
               <h4 class="text-md font-semibold">{{ project.name }}</h4>
               <p class="text-sm text-gray-600">{{ project.position }} · {{ project.date }}</p>
-              <p class="text-sm mt-1">{{ project.description }}</p>
+              <p class="text-xs mt-1">{{ project.description }}</p>
             </div>
             }
           </div>
@@ -115,8 +113,9 @@
           }
         </div>
       </section>
-
     </div>
   </div>
-
 </div>
+accenture indra (minside)
+
+ayesa babel
